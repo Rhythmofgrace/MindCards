@@ -126,11 +126,170 @@ function setZoom(next,cx=innerWidth/2,cy=innerHeight/2){
 }
 let drag=null;
 viewport.onpointerdown=event=>{
-  const coarse=innerWidth<=600||matchMedia('(pointer:coarse)').matches,card=event.target.closest('.card');
-  if(event.target.closest('.study-nav')||(!coarse&&card)||(!card&&event.target.closest('button')))return;
-  if(!menu.hidden)drag={menu:true,x:event.clientX,y:event.clientY,vx:menuView.x,vy:menuView.y};
-  else drag={x:event.clientX,y:event.clientY,vx:view.x,vy:view.y,toggle:event.target.closest('.question'),dismiss:!card};
-  viewport.classList.add('dragging');viewport.setPointerCapture(event.pointerId);
+let drag = null;
+  let pinch = null;
+  const pointers = new Map();
+
+  function pointerDistance([a, b]) {
+    return Math.hypot(b.x - a.x, b.y - a.y);
+  }
+
+  function pointerCenter([a, b]) {
+    return {
+      x: (a.x + b.x) / 2,
+      y: (a.y + b.y) / 2
+    };
+  }
+
+  viewport.onpointerdown = event => {
+    const coarse =
+      innerWidth <= 600 ||
+      matchMedia('(pointer:coarse)').matches;
+
+    const card = event.target.closest('.card');
+
+    if (
+      event.target.closest('.study-nav') ||
+      (!coarse && card) ||
+      (!card && event.target.closest('button'))
+    ) return;
+
+    pointers.set(event.pointerId, {
+      x: event.clientX,
+      y: event.clientY
+    });
+
+    viewport.setPointerCapture(event.pointerId);
+
+    if (pointers.size === 2) {
+      const points = [...pointers.values()];
+      const center = pointerCenter(points);
+
+      pinch = {
+        distance: pointerDistance(points),
+        scale: view.scale,
+        worldX: (center.x - view.x) / view.scale,
+        worldY: (center.y - view.y) / view.scale
+      };
+
+      drag = null;
+      viewport.classList.add('dragging');
+      return;
+    }
+
+    drag = !menu.hidden
+      ? {
+          menu: true,
+          x: event.clientX,
+          y: event.clientY,
+          vx: menuView.x,
+          vy: menuView.y
+        }
+      : {
+          x: event.clientX,
+          y: event.clientY,
+          vx: view.x,
+          vy: view.y,
+          toggle: event.target.closest('.question'),
+          dismiss: !card
+        };
+
+    viewport.classList.add('dragging');
+  };
+
+  viewport.onpointermove = event => {
+    if (pointers.has(event.pointerId)) {
+      pointers.set(event.pointerId, {
+        x: event.clientX,
+        y: event.clientY
+      });
+    }
+
+    if (pinch && pointers.size >= 2) {
+      const points = [...pointers.values()].slice(0, 2);
+      const center = pointerCenter(points);
+
+      const nextScale = Math.min(
+        1.6,
+        Math.max(
+          0.35,
+          pinch.scale * pointerDistance(points) / pinch.distance
+        )
+      );
+
+      view.scale = nextScale;
+      view.x = center.x - pinch.worldX * nextScale;
+      view.y = center.y - pinch.worldY * nextScale;
+
+      renderView();
+      return;
+    }
+
+    if (!drag) return;
+
+    if (drag.menu) {
+      menuView.x = drag.vx + event.clientX - drag.x;
+      menuView.y = drag.vy + event.clientY - drag.y;
+    } else {
+      view.x = drag.vx + event.clientX - drag.x;
+      view.y = drag.vy + event.clientY - drag.y;
+    }
+
+    renderView();
+  };
+
+  function clearViewportDrag() {
+    drag = null;
+    viewport.classList.remove('dragging');
+  }
+
+  viewport.onpointerup = event => {
+    const wasPinching = Boolean(pinch);
+
+    pointers.delete(event.pointerId);
+
+    if (wasPinching) {
+      pinch = null;
+      pointers.clear();
+      clearViewportDrag();
+      return;
+    }
+
+    if (
+      drag &&
+      Math.hypot(
+        event.clientX - drag.x,
+        event.clientY - drag.y
+      ) <= 8
+    ) {
+      if (drag.toggle) {
+        toggleCard(
+          drag.toggle.closest('.card'),
+          drag.toggle
+        );
+      } else if (drag.dismiss) {
+        closeCard(world.querySelector('.card.open'));
+      }
+    }
+
+    clearViewportDrag();
+  };
+
+  function cancelViewportGesture() {
+    pointers.clear();
+    pinch = null;
+    clearViewportDrag();
+  }
+
+  viewport.onpointercancel = cancelViewportGesture;
+  viewport.onlostpointercapture = event => {
+    pointers.delete(event.pointerId);
+
+    if (!pointers.size) {
+      pinch = null;
+      clearViewportDrag();
+    }
+  };
 };
 viewport.onpointermove=event=>{if(drag){
   if(drag.menu){menuView.x=drag.vx+event.clientX-drag.x;menuView.y=drag.vy+event.clientY-drag.y}
