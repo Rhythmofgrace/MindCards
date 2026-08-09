@@ -29,7 +29,7 @@ html.dark mark{background:#665d25}
 .toolbar>strong{position:absolute;left:50%;transform:translateX(-50%)}
 .toolbar:hover>strong,.toolbar:focus-within>strong{position:static;transform:none}
 .menu-panel{transform-origin:center;transition:transform .15s ease}
-:root{--question-dark-color:#a3a2a6;--answer-dark-color:#aaa7b2}
+:root{--question-dark-color:white;--answer-dark-color:#dddddd}
 html.dark .question{color:var(--question-dark-color)}
 html.dark .answer p{color:var(--answer-dark-color)}
 .toolbar button:before,.zoom-controls button:before,.study-nav button:before{content:"";display:block;width:20px;height:20px;margin:auto;background-position:center;background-size:20px 20px;background-repeat:no-repeat}
