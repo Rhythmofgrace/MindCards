@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
+  <title>Mindcards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=10">
+</head>
+<body>
+  <header class="toolbar">
+    <strong role="button" tabindex="0" aria-expanded="false">MindCards</strong>
+    <span class="divider"></span>
+    <button id="center" title="Center canvas" aria-label="Center canvas"></button>
+    <button id="theme" title="Use dark mode" aria-label="Use dark mode" aria-pressed="false"></button>
+    <label class="language-control">Language
+      <select id="language" aria-label="Content language">
+        <option value="english">English</option>
+        <option value="hinglish">Hinglish</option>
+      </select>
+    </label>
+    <label class="style-control">Style
+      <select id="text-style" aria-label="Text style to edit">
+        <option value="question">Sub heading</option>
+        <option value="answer">Answer</option>
+      </select>
+    </label>
+    <label class="style-control">Font
+      <select id="text-font" aria-label="Font family to edit">
+        <option value="Excalifont">Excalifont</option>
+        <option value="Inter">Inter</option>
+      </select>
+    </label>
+    <label class="style-control">Size <input id="text-size" type="range" min="12" max="32" value="21" aria-label="Text size"></label>
+    <label class="style-control">Width <input id="text-width" type="range" min="220" max="560" value="340" aria-label="Flashcard text width"></label>
+    <label class="color-control">Color <input id="text-color" type="color" value="#29282d" aria-label="Text color"></label>
+    <label class="style-control">Focus <input id="focus-opacity" type="range" min="0" max="100" value="50" aria-label="Other card opacity when focused"></label>
+    <span class="hint">drag to move · scroll to zoom · tap a question</span>
+  </header>
+
+  <main id="viewport" aria-label="Flashcard mind map">
+    <section id="menu" class="menu-screen" aria-label="Syllabus topics">
+      <div id="topic-menu" class="menu-panel">
+        <button id="back-units" class="back-button" hidden>Back to units</button>
+        <h1 id="menu-title">Units</h1>
+        <div id="unit-list" class="topic-list"></div>
+        <div id="topic-list" class="topic-list" hidden></div>
+      </div>
+    </section>
+    <nav id="study-nav" class="study-nav" aria-label="Flashcard navigation" hidden>
+      <button id="back-questions">Back</button>
+      <div class="topic-nav">
+        <button id="previous-topic" aria-label="Previous topic">Previous</button>
+        <button id="next-topic" aria-label="Next topic">Next</button>
+      </div>
+    </nav>
+    <div id="world">
+      <section class="topic node" style="--x:820px;--y:310px">
+        <h1>Problem Solving Agents</h1>
+      </section>
+      <article class="card node" style="--x:570px;--y:445px" data-card="type">
+        <button class="question" aria-expanded="false">What type of agent is it?</button>
+        <div class="answer"><div><p>A <mark>goal-based agent</mark>. It chooses actions by considering which future state best satisfies its goal.</p></div></div>
+      </article>
+      <article class="card node" style="--x:1070px;--y:445px" data-card="purpose">
+        <button class="question" aria-expanded="false">What does it do?</button>
+        <div class="answer"><div><p>It searches from the current state toward a desired goal state, comparing possible actions along the way.</p></div></div>
+      </article>
+      <article class="card node" style="--x:570px;--y:635px" data-card="method">
+        <button class="question" aria-expanded="false">How does it reach the goal state?</button>
+        <div class="answer"><div><p>By finding a sequence of actions that transforms the initial state into the goal state.</p></div></div>
+      </article>
+      <article class="card node" style="--x:1070px;--y:635px" data-card="detail">
+        <button class="question" aria-expanded="false">What else should I remember?</button>
+        <div class="answer"><div><p>Additional details for the complete answer.</p></div></div>
+      </article>
+      <article class="card node" style="--x:820px;--y:825px" data-card="extra" hidden>
+        <button class="question" aria-expanded="false"></button>
+        <div class="answer"><div></div></div>
+      </article>
+    </div>
+  </main>
+
+  <div class="zoom-controls"><button id="minus" aria-label="Zoom out"></button><output id="zoom">80%</output><button id="plus" aria-label="Zoom in"></button></div>
+  <script src="content.js?v=4"></script>
+  <script src="content_hing.js?v=1"></script>
+  <script src="app.js?v=9"></script>
+</body>
+</html>
