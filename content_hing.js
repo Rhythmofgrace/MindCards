@@ -1,272 +1,225 @@
-window.studyContent = {
+window.studyData = window.studyData || {};
+window.studyData.hinglish = {
   "units": {
-    "Unit 1: Introduction to Data Visualization": {
+    "Unit 1: Basics of Design Thinking": {
       "topics": {
-        "Fundamentals of Data Visualization and Decision Making": {
+        "Innovation and Creative Thinking": {
           "cards": [
             [
-              "1. What is Data Visualization?",
-              "Data visualization, data aur information ko charts, graphs, maps aur diagrams jaise visual elements ke zariye represent karne ka tareeka hai taaki insights ko aasan aur clear tareeke se samjha aur communicate kiya ja sake."
+              "1. Innovation kya hai aur business me iski kya significance hai?",
+              "Innovation ek aisa process hai jisme naye ya improved products, services, processes, ya business models banaye aur implement kiye jaate hain jo users aur organizations ko value deliver karte hain.\n- Competitive advantage aur business success ko drive karta hai.\n- Organizations ko uncertain aur dynamic business environments me adapt karne me help karta hai.\n- Evolving customer challenges ko effectively solve karta hai."
             ],
             [
-              "2. What is the primary objective of Data Visualization?",
-              "Iska main objective complex numerical aur categorical datasets ko visual context mein translate karna hai, jisse raw data ko analyze karna, samajhna aur us par action lena aasan ho jaye."
+              "2. Creative thinking kya hai aur yeh problem-solving ko kaise support karti hai?",
+              "Creative thinking ek mental process hai jisse existing challenges ke liye unique, original, aur non-traditional ideas ya solutions generate kiye jaate hain.\n- Traditional patterns aur conventional assumptions ko todta hai.\n- Underlying innovation opportunities ko identify karne me madad karta hai.\n- Multiple alternative perspectives explore karke problem-solving ko enhance karta hai."
             ],
             [
-              "3. What are the key benefits of Data Visualization?",
-              "Iske main benefits hain:\n- Complex datasets ko simplify karta hai\n- Brain cognition aur memory retention ko fast karta hai\n- Hidden patterns, trends aur outliers ko highlight karta hai\n- Evidence-based decision-making ko teez banata hai\n- Communication aur data storytelling ko enhance karta hai"
+              "3. Innovation opportunity kya hoti hai?",
+              "Innovation opportunity ek identified gap, unmet customer need, ya market inefficiency hai jise creative design aur execution ke zariye ek valuable product, service, ya business model me transform kiya ja sakta hai."
             ],
             [
-              "4. How does Data Visualization support decision making?",
-              "Yeh facts ko visual evidence mein convert karke decision making ko support karta hai. Isse leaders ko problems define karne, key performance metrics monitor karne, options compare karne aur future outcomes forecast karne mein madad milti hai."
+              "4. Structured aur unstructured problems me kya difference hai?",
+              "Structured problems well-defined hote hain jinki clear goals, constraints, aur known solution paths hote hain. Unstructured problems ambiguous, complex, aur poorly defined hote hain jinke immediate ya obvious solutions nahi hote, aur inhein frame & solve karne ke liye design-based thinking ki zaroorat hoti hai."
             ]
           ]
         },
-        "Types of Data and Data Attributes": {
+        "Overview of Design Thinking": {
           "cards": [
             [
-              "1. What is a data attribute?",
-              "Data attribute kisi observation ki ek measurable property ya characteristic hoti hai, jaise age, category, timestamp, ya location."
+              "1. Design Thinking ko define karein aur iske primary objectives batayein.",
+              "Design Thinking ek human-centered, iterative problem-solving methodology hai jo unmet needs ko identify karne aur implementable innovation solutions develop karne ke liye creative approaches ka use karti hai.\n- Complex problems ko solve karne ke liye design-based approach introduce karna.\n- Unstructured information ko well-defined solvable problems me frame karna.\n- Concepts ko validate karne ke liye ideation tools aur rapid prototyping ka use karna."
             ],
             [
-              "2. What is Numerical Data and how is it visualized?",
-              "Numerical data mein quantitative values hoti hain jinpar arithmetic calculations kiye ja sakte hain. Iske do main types hain:\n- Discrete numerical data (countable whole numbers)\n- Continuous numerical data (continuous scale par measure hone wali values)\nIsse zyadatar histograms, bar charts, box plots, ya scatter plots se dikhaya jata hai."
+              "2. Design Thinking process ke key stages ko list aur briefly describe karein.",
+              "Design Thinking process me paanch iterative stages hote hain:\n- Empathize: Observation ke zariye user needs, behaviors, aur emotions ko samajhna.\n- Define: Findings ko synthesize karke ek clear, human-centered problem statement frame karna.\n- Ideate: Creative potential solutions ki wide range generate karna.\n- Prototype: Ideas ke low-fidelity physical ya digital representations banana.\n- Implement / Test: Solutions ko action me lana aur real users ke saath test karke feedback lena."
             ],
             [
-              "3. What is Categorical Data and how is it visualized?",
-              "Categorical data qualitative labels, groups ya classes ko represent karta hai. Ismein shamil hain:\n- Nominal data (bina kisi specific order ke labels, e.g., department name)\n- Ordinal data (ek natural order wale labels, e.g., customer satisfaction rating)\nIsse zyadatar bar charts, frequency tables, ya pie charts se represent kiya jata hai."
-            ],
-            [
-              "4. What is Temporal Data and how is it visualized?",
-              "Temporal data dates, time ya sequential timestamps ko record karta hai taaki over time hone wale changes ko track kiya ja sake. Isse sabse achha line charts, timelines, ya area charts se dikhaya jata hai."
-            ],
-            [
-              "5. What is Geographical Data and how is it visualized?",
-              "Geographical data spatial locations, boundaries, ya physical coordinates ko represent karta hai. Isse sabse achha choropleth maps, symbol maps, ya dot density maps se dikhaya jata hai."
+              "3. Design Thinking traditional business problem-solving se kaise alag hai?",
+              "Traditional problem-solving linear logic, historical data, aur immediate analytical answers par heavily rely karti hai. Jabki Design Thinking final solutions se pehle deep user empathy, iterative experimentation, creative exploration, aur learning-by-doing par focus karti hai."
             ]
           ]
         },
-        "Data Visualization Process": {
+        "Customer Centricity and Product Experience": {
           "cards": [
             [
-              "1. What is the Data Visualization Process?",
-              "Data visualization process data ko collect, explore, analyze, visualize aur interpret karne ka ek step-by-step sequence hai taaki meaningful insights communicate kiye ja sakein."
+              "1. Design Thinking me customer centricity ko explain karein.",
+              "Customer centricity ek aisa approach hai jo product design aur business decision-making ke har stage par customer ki real-world needs, expectations, aur emotional experiences ko center me rakhta hai."
             ],
             [
-              "2. What are the main steps in the Data Visualization Process?",
-              "Iske main steps hain:\n- Data Collection: Reliable raw data gather karna\n- Data Exploration: Data structure, missing values aur outliers ko examine karna\n- Data Analysis: Data ko clean, transform aur summarize karna\n- Visualization Design: Data ko sahi visual charts aur layout par map karna\n- Data Interpretation: Trends ko explain karna aur results ka context samjhana"
+              "2. Design Thinking customer experience ko kaise enhance karta hai?",
+              "Design Thinking hidden pain points ko discover karke, friction reduce karke, product functionality ko expectations ke saath align karke, aur solutions ko intuitive, meaningful, aur emotionally satisfying banakar customer experience ko enhance karta hai."
             ],
             [
-              "3. Why is data exploration important in the visualization process?",
-              "Data exploration se designers ko variable distributions samajhne, missing ya corrupted entries ko identify karne, anomalies ko shuru mein hi spot karne aur sahi chart types choose karne mein madad milti hai."
+              "3. Product experience ke key parameters batayein.",
+              "Product experience ko in key parameters par evaluate kiya jata hai:\n- Usability: Users product ke saath kitni easily aur intuitively interact karte hain.\n- Functionality: Product core problem ko kitne effectively solve karta hai.\n- Emotional Appeal: Interaction ke dauran product user ko kaisa feel karata hai.\n- Ergonomics & Aesthetics: Comfort, safety, visual design, aur physical interface."
+            ],
+            [
+              "4. Design Thinking ke zariye solve kiye gaye real-world customer challenges ke examples dein.",
+              "Examples me include hain: complex online booking processes ko streamline karna, bacchon ke liye medical scanning devices ko redesign karke unki anxiety kam karna, aur non-technical users ke liye mobile banking interfaces ko simplify karna."
             ]
           ]
         },
-        "Challenges and Limitations": {
+        "Global Success Stories": {
           "cards": [
             [
-              "1. What are the major challenges in Data Visualization?",
-              "Iske major challenges hain:\n- Poor data quality aur missing records ko manage karna\n- Large aur complex datasets ko bina clutter ke handle karna\n- Sahi visual encodings aur scales choose karna\n- Alag-alag audience literacy levels ke liye design karna\n- Data security aur privacy rules ka dhyan rakhna"
-            ],
-            [
-              "2. What are the main limitations of Data Visualization?",
-              "Iske main limitations hain:\n- Agar scales ya baselines distorted hon toh visuals mislead kar sakte hain\n- Charts mein dikhne wale correlation ko galat tareeke se causation maan liya jata hai\n- Data aggregation karne se important subgroup differences chhip sakte hain\n- Complex background context ka oversimplification ho sakta hai"
-            ]
-          ]
-        },
-        "Ethical Data Visualization": {
-          "cards": [
-            [
-              "1. What is Ethical Data Visualization?",
-              "Ethical data visualization data ko imandari, accuracy aur fairness ke saath present karne ki practice hai, jismein data sources, original context aur user privacy ka poora khayal rakha jata hai."
-            ],
-            [
-              "2. What are the key principles of Ethical Data Visualization?",
-              "Iske core principles hain:\n- Honest baselines aur proportional scales ka use karna\n- Biased claims support karne ke liye cherry-picking data se bachna\n- Data sources, methodology aur uncertainty ko transparently disclose karna\n- Personally identifiable information (PII) ko anonymize karna\n- Colorblind aur sabhi tarah ke users ke liye accessible designs banana"
-            ]
-          ]
-        },
-        "Visual Perception and Interpretation": {
-          "cards": [
-            [
-              "1. What is Visual Perception in visualization?",
-              "Visual perception woh process hai jiske zariye insani aankhein aur dimag visual properties (jaise position, length, shape, aur color) ko detect, organize aur interpret karte hain."
-            ],
-            [
-              "2. What are pre-attentive attributes?",
-              "Pre-attentive attributes woh visual features hain jise hamara brain seconds ke chhote hisse (milliseconds) mein bina kisi conscious effort ke process kar leta hai. Examples:\n- Position aur length\n- Size aur shape\n- Color hue aur intensity\n- Spatial orientation"
-            ],
-            [
-              "3. How do Gestalt principles apply to Data Visualization?",
-              "Gestalt principles batate hain ki viewers alag-alag elements ko naturally ek saath group karke kaise dekhte hain:\n- Proximity: Paas-paas wale items ek saath grouped lagte hain\n- Similarity: Same color ya shape wale items related lagte hain\n- Enclosure: Boundary ke andar ke items ek group banate hain\n- Continuity: Ek line ya curve par aligned elements connected lagte hain"
-            ],
-            [
-              "4. Which visual encodings offer the highest visual accuracy?",
-              "Common scale par position aur length comparison ke liye sabse zyada accurate hoti hain, jabki area, angle, aur 3D volume ko sahi se judge karna brain ke liye kafi mushkil hota hai."
+              "1. Explain karein ki Airbnb, Apple, IDEO, aur Netflix jaisi global companies ne business success ke liye Design Thinking ka use kaise kiya.",
+              "Global success stories dikhati hain ki kaise design-based innovation business models ko transform karti hai:\n- Airbnb: Trust build karne ke liye listing photos aur user journey ko redesign kiya, jisne business ko failure se bachaya.\n- Apple: User intuition aur elegant aesthetic experience par focused seamless hardware-software design ko integrate kiya.\n- IDEO: First Apple mouse jaise iconic products banane ke liye human-centered design methodologies ko pioneer kiya.\n- Netflix: Users ke badalte content consumption habits ki deep understanding ke basis par DVD rentals se streaming aur original content me shift hua."
             ]
           ]
         }
       }
     },
-    "Unit 2: Visualization Tools and Data Storytelling": {
+    "Unit 2: Learning to Empathize and Define the Problem": {
       "topics": {
-        "Visualization Tools Overview and Comparison": {
+        "Empathize Stage and Empathy Tools": {
           "cards": [
             [
-              "1. What is a visualization tool?",
-              "Visualization tool ek aisa software hai jiska use raw data ko charts, graphs, maps, interactive dashboards, ya reports mein transform karne ke liye kiya jata hai."
+              "1. Design Thinking me Empathize stage ko define karein.",
+              "Empathize stage ka matlab hai active observation, engagement, aur immersive study ke zariye users, unke lived experiences, behaviors, motivations, aur underlying emotional needs ki ek deep, unbiased understanding hasil karna."
             ],
             [
-              "2. What are the main visualization tools and their key features?",
-              "Main tools aur unke features hain:\n- Microsoft Excel: Ad-hoc analysis, pivot tables aur simple charts ke liye best\n- Tableau: Visual exploration, drag-and-drop analytics aur polished interactive dashboards ke liye sabse achha\n- Power BI: Enterprise reporting, DAX se data modeling, Power Query transformations aur Microsoft tools integration ke liye ideal\n- Python: Matplotlib, Seaborn aur Plotly ke zariye custom, reproducible aur automated code-based visuals ke liye superior"
+              "2. Innovation process me empathy kyun critical hai?",
+              "Empathy designers ko assumptions ya self-bias ke basis par products banane se rokti hai. Yeh unstated needs ko uncover karti hai, hidden pain points ko identify karti hai, aur yeh ensure karti hai ki final solutions end users ke saath genuinely resonate karein."
             ],
             [
-              "3. How do you choose the right visualization tool?",
-              "Sahi tool chunna in baaton par depend karta hai:\n- Dataset ka size aur complexity\n- Budget aur licensing cost\n- Dynamic interactivity aur automation ki zarurat\n- Team ki technical script/coding skill"
+              "3. Users ke saath empathy develop karne ke liye use hone wale tools aur techniques ke naam batayein.",
+              "Empathy build karne ke liye design tools include karte hain:\n- User Interviews: User stories gather karne ke liye direct qualitative discussions.\n- Direct Observation & Shadowing: Users ko unke natural environment me products ke saath interact karte dekhna.\n- Empathy Maps: User insights ko Say, Think, Do, aur Feel me classify karna.\n- Journey Mapping: Step-by-step user interactions aur emotional touchpoints ko document karna."
+            ],
+            [
+              "4. Designers unstructured information ko kaise observe aur assimilate karte hain?",
+              "Designers qualitative observational data, interview transcripts, aur behavioral notes gather karte hain, phir affinity diagrams aur theme mapping ka use karke is raw unstructured information ko synthesize karke clear, solvable problem frames banate hain."
             ]
           ]
         },
-        "Microsoft Excel for Visualization": {
+        "Individual Differences and Uniqueness": {
           "cards": [
             [
-              "1. What is Microsoft Excel used for in data visualization?",
-              "Microsoft Excel ek spreadsheet tool hai jiska use data organize karne, quick charts, pivot charts, conditional formatting aur simple dashboards banane ke liye kiya jata hai."
+              "1. Design thinking me individual differences aur uniqueness se kya matlab hai?",
+              "Individual differences har user aur team member ke distinct background, cognitive style, cultural context, aur personal perspective ko refer karte hain. Design thinking uniqueness ko value deta hai taaki diverse, inclusive, aur rich creative solutions ko foster kiya ja sake."
             ],
             [
-              "2. What are the key features of Excel for visualization?",
-              "Excel ke key features hain:\n- Quick summary ke liye Pivot Tables aur Pivot Charts\n- Values ko colors aur data bars se highlight karne ke liye Conditional Formatting\n- Column, bar, line aur pie chart jaise standard chart types\n- Basic interactive filtering ke liye Slicers"
-            ],
-            [
-              "3. What are the strengths and limitations of Excel?",
-              "Iske strengths aur limitations hain:\n- Strengths: Kafi accessible hai, seekhna aasan hai aur business mein widely use hota hai\n- Limitations: Bohot bade datasets ke saath struggle karta hai, automated governance ki kami hai aur interactive controls limited hain"
+              "2. Group discussions aur activities individual differences ko appreciate karne me kaise encourage karti hain?",
+              "Group discussions aur collaborative design activities alag-alag viewpoints ko ek saath laati hain, jisse cognitive biases challenge hoti hain, team members me empathy encourage hoti hai, aur complex challenges solve karne ke liye diverse insights ka use hota hai."
             ]
           ]
         },
-        "Tableau for Visualization": {
+        "Define Stage and Wicked Problems": {
           "cards": [
             [
-              "1. What is Tableau?",
-              "Tableau ek enterprise visual analytics software hai jise fast visual exploration, drag-and-drop chart creation aur interactive dashboards banane ke liye design kiya gaya hai."
+              "1. Design Thinking me Define stage kya hai?",
+              "Define stage me empathy findings ko analyze aur synthesize karke ek clear, focused, aur human-centered problem statement frame kiya jata hai (jise aksar 'How Might We' question ke roop me express karte hain)."
             ],
             [
-              "2. What are the key features of Tableau?",
-              "Iske main features hain:\n- Drag-and-drop shelf interface\n- Databases, files aur cloud sources se broad connectivity\n- Interactive dashboard actions, parameters aur tooltips\n- Strong geographic mapping aur data storytelling tools"
+              "2. Wicked problem kya hai? Iske key characteristics batayein.",
+              "Wicked problem ek aisa complex, ill-defined, aur deeply interconnected challenge hai jiska koi definitive problem statement ya single right answer nahi hota.\n- Incomplete ya continuously changing requirements.\n- High level ki social, economic, ya environmental complexity.\n- Solutions simple fixes ke bajaye unexpected consequences generate karte hain."
             ],
             [
-              "3. What are the main use cases and limitations of Tableau?",
-              "Uses aur limitations hain:\n- Use cases: Exploratory visual analytics, executive reporting aur public data storytelling\n- Limitations: High licensing cost aur advanced calculations ke liye steeper learning curve"
-            ]
-          ]
-        },
-        "Power BI as a Visualization Tool": {
-          "cards": [
-            [
-              "1. What is Power BI?",
-              "Power BI Microsoft ka end-to-end business intelligence platform hai jo enterprise data ko connect, transform, model, visualize aur share karne ke kaam aata hai."
-            ],
-            [
-              "2. What are the main components and features of Power BI?",
-              "Iske primary features hain:\n- Data extract aur clean karne ke liye Power Query Editor\n- Table relationships ke saath Relational Data Modeling\n- Dynamic measures aur calculations ke liye Data Analysis Expressions (DAX)\n- Cloud publishing, sharing aur scheduled data refresh ke liye Power BI Service"
-            ],
-            [
-              "3. What are the primary use cases of Power BI?",
-              "Power BI mainly enterprise financial reporting, operational tracking, sales dashboards aur organization-wide automated reporting ke liye use hota hai."
-            ]
-          ]
-        },
-        "Python for Visualization": {
-          "cards": [
-            [
-              "1. How is Python used for data visualization?",
-              "Python ek programming language hai jo open-source libraries ka use karke code ke zariye static, animated ya fully interactive data visualizations banati hai."
-            ],
-            [
-              "2. What are the main Python visualization libraries?",
-              "Main libraries hain:\n- Matplotlib: Highly configurable static plots ke liye core library\n- Seaborn: Beautiful statistical graphics ke liye Matplotlib par bani library\n- Plotly: Web-ready interactive charts banane ke liye library"
-            ],
-            [
-              "3. What are the advantages and limitations of Python for visualization?",
-              "Iske advantages aur limitations hain:\n- Advantages: Fully customizable, reproducible script execution, aur Machine Learning workflows ke saath seamless integration\n- Limitations: Programming knowledge ki zarurat hoti hai aur interactive dashboards banane mein extra effort lagta hai"
-            ]
-          ]
-        },
-        "Data Storytelling: Narrative and Context": {
-          "cards": [
-            [
-              "1. What is Data Storytelling?",
-              "Data storytelling, data, visuals aur narrative structure ko combine karke actionable insights ko clear context ke saath communicate karne ki art hai."
-            ],
-            [
-              "2. What are the roles of narrative and context in data storytelling?",
-              "Unke roles hain:\n- Narrative: Facts ko ek logical arc (introduction, evidence, conflict, aur conclusion) mein organize karta hai\n- Context: Data ko sahi se interpret karne ke liye zaruri background details, benchmarks, timeframes aur definitions deta hai"
-            ],
-            [
-              "3. What are the key principles of effective Data Storytelling?",
-              "Key principles hain:\n- Single target audience aur clear purpose par focus karein\n- Direct annotations aur visual hierarchy se viewer ka attention guide karein\n- Unnecessary visual clutter ko hata dein\n- Clear recommendation ya call-to-action ke saath end karein"
-            ]
-          ]
-        },
-        "Dashboard Layout and Interactivity": {
-          "cards": [
-            [
-              "1. What is dashboard interactivity?",
-              "Dashboard interactivity users ko dynamic tareeke se data explore karne ki permission deti hai (jaise filtering, slicers, tooltips, drill-down aur cross-highlighting)."
-            ],
-            [
-              "2. What are the best practices for dashboard layout?",
-              "Best layout practices hain:\n- Top-left reading area mein key performance metrics (KPIs) rakhein\n- Related visuals ko grid alignment aur proper whitespace ke saath group karein\n- Poore report mein consistent color theme aur font style maintain karein\n- Excessive charts, clutter aur unnecessary vertical scrolling se bachein"
-            ],
-            [
-              "3. What are the best practices for dashboard interactivity?",
-              "Best practices include:\n- Slicers ke clear labels rakhein aur simple reset option dein\n- Tooltips ka use karke visual clutter ke bina 'details on demand' dein\n- Ensure karein ki filters bina kisi lag ke fast response dein"
+              "3. Explain karein ki wicked problems ko kaise identify kiya jata hai aur unke solutions ka kya impact hota hai.",
+              "Wicked problems ko humare aas-paas ke systemic issues (jaise urban traffic congestion ya healthcare access) ko dekhkar identify kiya jata hai. Inke solutions ke liye diverse stakeholders ke beech consensus ki zaroorat hoti hai aur inka pooray ecosystem par long-term impact ho sakta hai."
             ]
           ]
         }
       }
     },
-  "Unit 3: Designing Effective Visualizations": {
+    "Unit 3: Ideate, Prototype and Implement": {
       "topics": {
-        "Principles of Good Visualization Design": {
+        "Templates and Techniques of Ideation": {
           "cards": [
             [
-              "1. What is a visualization design principle?",
-              "Visualization design principle ek established guideline hoti hai jo target audience ke liye data ko clearly, accurately, efficiently aur ethically represent karne mein madad karti hai."
+              "1. Design Thinking me Ideate stage ko define karein.",
+              "Ideate stage bina kisi immediate judgment ya criticism ke creative ideas aur potential solutions ki high volume aur wide variety generate karne par focus karta hai."
             ],
             [
-              "2. What are the core principles of good visualization design?",
-              "Good design ke core principles hain:\n- Data attribute aur objective ke hisaab se sahi chart type chunein\n- Visual distortion se bachne ke liye honest baseline scales ka use karein\n- Viewer ke attention ko guide karne ke liye clean visual hierarchy maintain karein\n- Chartjunk, decorative 3D effects aur faltu gridlines ko kam se kam rakhein\n- Clear titles, concise axis labels, units aur source citations zaroor shamil karein"
+              "2. Ideation template ke roop me Brainstorming ko explain karein.",
+              "Brainstorming ek group creativity technique hai jo kisi problem ke solution ke liye badi sankhya me ideas generate karne ke liye design ki gayi hai.\n- Wild ideas ko encourage karti hai aur criticism ko defer karti hai.\n- Naye raste khojne ke liye dusron ke ideas par build karti hai.\n- Quality filter karne se pehle quantity par focus karti hai."
+            ],
+            [
+              "3. Ideation template ke roop me Systems Thinking ko explain karein.",
+              "Systems Thinking ek aisa analytical approach hai jo kisi problem ko ek isolated issue ke bajaye ek interconnected ecosystem ke part ke roop me dekhta hai.\n- Elements ke beech relationships, feedback loops, aur dependencies ko examine karta hai.\n- Integrated aur holistic solutions design karne me help karta hai jo unintended side effects ko rokte hain."
+            ],
+            [
+              "4. Wicked problems par brainstorming ke dauran consensus kaise reach kiya ja sakta hai?",
+              "Wicked problems par consensus structured voting templates, related ideas ko group karne ke liye affinity mapping, clear evaluation criteria define karke, aur diverse stakeholders ke beech collaborative discussion ko facilitate karke achieve kiya jata hai."
             ]
           ]
         },
-        "Color in Visualization": {
+        "Customer Experience Mapping for Ideation": {
           "cards": [
             [
-              "1. What is the role of color in visualization?",
-              "Color ek powerful visual encoding hai jiska use categories ko alag dikhane, sequential numeric magnitudes ko represent karne, exceptions ko highlight karne aur visual hierarchy set karne ke liye kiya jata hai."
+              "1. Customer Experience Mapping kya hai aur iska ideation me kaise use hota hai?",
+              "Customer Experience Mapping kisi product ya service ke saath different touchpoints par user ki step-by-step journey ko visualize karta hai.\n- Emotional peaks, valleys, aur friction points ko highlight karta hai.\n- Un specific opportunities ko pinpoint karta hai jahan naye ideas user satisfaction ko improve kar sakte hain."
             ],
             [
-              "2. What are the main types of color palettes?",
-              "Main color palette types hain:\n- Qualitative Palettes: Unordered categorical data ke liye (e.g., alag-alag product types)\n- Sequential Palettes: Low se high ki taraf ordered numeric data ke liye (e.g., income levels)\n- Diverging Palettes: Central baseline midpoint se deviation dikhane ke liye (e.g., profit vs loss)"
-            ],
-            [
-              "3. What are the best practices for using color in visualization?",
-              "Color use karne ki key best practices hain:\n- Proper contrast ke saath limited (restrained) color palette ka use karein\n- Colorblind-safe palettes chunein (pure red-green combinations se bachein)\n- Sabhi report pages par color meanings consistent rakhein\n- Critical information dene ke liye kabhi bhi sirf color par depend na rahein (shape ya text ka bhi use karein)"
+              "2. Customer experience map karne me involved steps batayein.",
+              "Experience mapping ke key steps:\n- Target user persona aur scenario define karna.\n- User dwara liye gaye sequential actions aur touchpoints ki list banana.\n- Har stage par user ke emotions, thoughts, aur pain points ko identify karna.\n- Targeted design improvements brainstorm karne ke liye gaps ko analyze karna."
             ]
           ]
         },
-        "Data Modeling for Visualization": {
+        "Prototyping Methods and Rapid Prototyping": {
           "cards": [
             [
-              "1. What is a Data Model in visualization?",
-              "Data model tables, fields, key relationships aur calculated metrics ka ek structured organization hai, jise accurate reporting aur dynamic querying ko support karne ke liye design kiya jata hai."
+              "1. Prototype stage ko define karein aur iska purpose explain karein.",
+              "Prototype stage me ideas ke low-cost, scaled-down physical ya digital versions banaye jaate hain taaki resources commit karne se pehle users ke saath concepts ko explore, test, aur validate kiya ja sake."
             ],
             [
-              "2. Why is data modeling important in visualization?",
-              "Data modeling important hai kyunki yeh:\n- Ensure karta hai ki tables ke beech ke relationships sahi se filter hon\n- Duplicate counting aur missing records ko rokta hai\n- Visuals mein reusable, dynamic calculations ko enable karta hai\n- Report performance aur query speed ko fast aur optimize karta hai"
+              "2. Rapid Prototyping kya hota hai?",
+              "Rapid Prototyping tangible mockups ya digital wireframes ka quick fabrication hai jiska use design concepts ko jaldi test karne, immediate feedback gather karne, aur jyada time ya money spend kiye bina iterate karne ke liye hota hai."
             ],
             [
-              "3. What is a Star Schema in data modeling?",
-              "Star schema ek data modeling structure hai jismein ek central Fact Table hoti hai (jismein quantitative measurements/numbers hote hain), jo charo taraf se related Dimension Tables (jismein descriptive details/attributes hote hain) se judi hoti hai."
+              "3. Prototyping ke common methods batayein.",
+              "Common prototyping methods me include hain:\n- Paper Prototypes & Storyboards: User interfaces aur flow ko illustrate karne ke liye quick sketches.\n- Physical 3D Models: Foam, cardboard, ya 3D-printed physical representations.\n- Digital Wireframes & Interactive Mockups: Digital tools se bane clickable prototypes."
+            ]
+          ]
+        },
+        "Implementation in Design Thinking": {
+          "cards": [
+            [
+              "1. Design thinking project me Implementation stage ko explain karein.",
+              "Implementation stage verified prototypes ko final, functional, aur market-ready products ya services me transform karta hai.\n- Isme detailed engineering, production, resource allocation, aur market strategy शामिल hoti hai.\n- Yeh ensure karta hai ki final launch tak human-centered vision maintain rahe."
+            ]
+          ]
+        }
+      }
+    },
+    "Unit 4: Feedback, Re-Design & Re-Create": {
+      "topics": {
+        "Feedback Loops and User Experience": {
+          "cards": [
+            [
+              "1. Design Thinking me feedback loop kya hota hai?",
+              "Feedback loop ek aisa continuous process hai jahan user reactions, data, aur test observations ko collect, analyze, aur previous stages me feed kiya jata hai taaki product ko refine, re-design, aur improve kiya ja sake."
+            ],
+            [
+              "2. Effective feedback loop ke key elements batayein.",
+              "Effective feedback loop ke elements me include hain:\n- Observation & Capture: Testing ke dauran explicit user reactions ko gather karna.\n- Analysis: User ki dikkaton ya praise ke underlying reasons ko identify karna.\n- Iteration: Insights ko direct re-design aur re-create solutions par apply karna."
+            ],
+            [
+              "3. User-focused design me ergonomic challenges ko explain karein.",
+              "Ergonomic challenges is baat se relate karte hain ki koi product human body dimensions, capabilities, aur comfort ke saath kitni acchi tarah physically aur cognitively fit hota hai.\n- Physical Ergonomics: Strain reduce karna, posture improve karna, aur physical accessibility badhana.\n- Cognitive Ergonomics: Mental load, confusion, aur interface complexity ko kam karna."
+            ]
+          ]
+        },
+        "Final Concept Testing": {
+          "cards": [
+            [
+              "1. Concept Testing ko define karein aur iski significance explain karein.",
+              "Concept Testing target end-users ke saamne high-fidelity prototypes ya developed concepts ko present karne ka process hai, taaki full launch se pehle user acceptance, usability, value proposition, aur overall market feasibility ko evaluate kiya ja sake."
+            ],
+            [
+              "2. Concept testing Re-Design aur Re-Create phase ko kaise guide karti hai?",
+              "Concept testing unaddressed usability flaws ya missing features ko reveal karti hai, jisse evidence-based insights milti hain jo necessary adjustments, structural re-designs, ya complete feature re-creations ko dictate karti hain."
+            ]
+          ]
+        },
+        "Final Presentation and Problem Solving": {
+          "cards": [
+            [
+              "1. Design thinking project me final presentation ka kya purpose hai?",
+              "Final presentation poori design journey ko—initial user empathy aur problem definition se lekar validated prototypes aur business impact tak—stakeholders ke saath communicate karti hai taaki unhein persuade kiya ja sake aur implementation ke liye backing secure ki ja sake."
+            ],
+            [
+              "2. Explain karein ki final presentations innovative problem-solving ko kaise demonstrate karti hain.",
+              "Final presentation key user insights ko showcase karke, testing ke dauran ikattha kiye gaye evidence se design decisions ko justify karke, aur yeh dikhakar ki creative solution original user challenge ko kaise directly solve karta hai, problem-solving ko demonstrate karti hai."
             ]
           ]
         }
