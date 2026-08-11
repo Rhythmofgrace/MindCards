@@ -1,84 +1,69 @@
-window.studyContent = {
+window.studyData = window.studyData || {};
+window.studyData.english = {
   "units": {
     "Unit 1: Basics of Design Thinking": {
       "topics": {
         "Innovation and Creative Thinking": {
           "cards": [
             [
-              "1. What is Innovation and why is it significant in business?",
-              "Innovation is the process of creating and implementing new or significantly improved products, services, processes, or business models that deliver tangible value to users and organizations.\n\nIts key significance in business includes:\n- Drives organizational growth, profitability, and competitive advantage\n- Enables adaptation to turbulent and uncertain market environments\n- Solves complex customer pain points effectively\n- Unlocks new market opportunities and revenue streams"
+              "1. What is innovation and why is it significant in business?",
+              "Innovation is the process of creating, developing, and implementing new or improved products, services, processes, or business models that deliver value to users and organizations.\n- Drives competitive advantage and business success.\n- Helps organizations adapt to turbulent and uncertain business environments.\n- Solves evolving customer challenges effectively."
             ],
             [
-              "2. What is Creative Thinking and what problem-solving approaches does it use?",
-              "Creative thinking is the cognitive process of generating novel, unconventional, and useful ideas by approaching problems from fresh perspectives.\n\nKey problem-solving approaches in creative thinking include:\n- Divergent Thinking: Generating a broad array of varied possibilities without immediate judgment\n- Convergent Thinking: Analyzing, evaluating, and narrowing down options to select the optimal solution\n- Lateral Thinking: Breaking established cognitive patterns to find indirect solutions\n- Abductive Reasoning: Formulating the best plausible explanation or design hypothesis based on observations"
+              "2. What is creative thinking and how does it support problem-solving?",
+              "Creative thinking is the mental process of generating unique, original, and non-traditional ideas or solutions to existing challenges.\n- Breaks away from established patterns and conventional assumptions.\n- Enables identification of underlying innovation opportunities.\n- Enhances problem-solving by exploring multiple alternative perspectives."
             ],
             [
-              "3. What is an Innovation Opportunity?",
-              "An innovation opportunity is an unfulfilled customer need, market inefficiency, technological advancement, or emerging societal trend that can be transformed into a valuable solution through creative problem-solving."
+              "3. What is an innovation opportunity?",
+              "An innovation opportunity is a identified gap, unmet customer need, or market inefficiency that can be transformed into a valuable product, service, or business model through creative design and execution."
+            ],
+            [
+              "4. What is the difference between structured and unstructured problems?",
+              "Structured problems are well-defined with clear goals, constraints, and known solution paths. Unstructured problems are ambiguous, complex, poorly defined, and lack immediate or obvious solutions, requiring design-based thinking to frame and solve."
             ]
           ]
         },
-        "Design Thinking Approach and Objectives": {
+        "Overview of Design Thinking": {
           "cards": [
             [
-              "1. What is Design Thinking?",
-              "Design Thinking is a human-centered, iterative problem-solving framework that emphasizes deep user empathy, framing solvable problems, collaborative ideation, rapid prototyping, and hands-on testing."
+              "1. Define Design Thinking and state its primary objectives.",
+              "Design Thinking is a human-centered, iterative problem-solving methodology that uses creative approaches to identify unmet needs and develop implementable innovation solutions.\n- To introduce a design-based approach to solving complex problems.\n- To frame unstructured information into well-defined solvable problems.\n- To utilize ideation tools and rapid prototyping for validating concepts."
             ],
             [
-              "2. What are the primary objectives of the Design Thinking course?",
-              "The core objectives are:\n- Introduce students to a design-based thinking approach for solving complex problems\n- Observe and assimilate unstructured information into well-framed, solvable problems\n- Train students in structured ideation tools and templates\n- Emphasize the importance of prototyping and testing in the innovation journey\n- Execute implementable projects that solve real-world challenges"
+              "2. List and briefly describe the key stages of the Design Thinking process.",
+              "The Design Thinking process consists of five iterative stages:\n- Empathize: Understand user needs, behaviors, and emotions through observation.\n- Define: Synthesize findings to frame a clear, human-centered problem statement.\n- Ideate: Generate a wide range of creative potential solutions.\n- Prototype: Build low-fidelity physical or digital representations of ideas.\n- Implement / Test: Put solutions into action and test them with real users for feedback."
             ],
             [
-              "3. What are the core stages of the Design Thinking process?",
-              "The five core stages are:\n- Empathize: Research and understand user needs, emotions, and behaviors\n- Define: Frame a clear, human-centered problem statement based on user insights\n- Ideate: Generate a wide range of creative ideas and solution concepts\n- Prototype: Build low-cost, tangible representations of selected concepts\n- Implement (and Test): Deploy solutions, evaluate user feedback, and refine iteratively"
-            ],
-            [
-              "4. How does Design Thinking differ from traditional business problem-solving?",
-              "Traditional business problem-solving relies heavily on linear historical data, top-down assumptions, and analytical risk avoidance. In contrast, Design Thinking is user-centric, exploratory, experimental, and relies on rapid hands-on prototyping and continuous user feedback."
+              "3. How does Design Thinking differ from traditional business problem-solving?",
+              "Traditional problem-solving relies heavily on linear logic, historical data, and immediate analytical answers. Design Thinking focuses on deep user empathy, iterative experimentation, creative exploration, and learning-by-doing before finalizing solutions."
             ]
           ]
         },
-        "Customer Centricity and Customer Experience": {
+        "Customer Centricity and Product Experience": {
           "cards": [
             [
-              "1. What is Customer Centricity in Design Thinking?",
-              "Customer centricity is a strategic orientation that places real user needs, behaviors, emotions, and constraints at the core of product design, service delivery, and organizational decision-making."
+              "1. Explain customer centricity in Design Thinking.",
+              "Customer centricity is an approach that places the customer's real-world needs, expectations, and emotional experiences at the center of every stage of product design and business decision-making."
             ],
             [
-              "2. What is Customer Experience (CX) and Product Experience?",
-              "Customer Experience (CX) represents the holistic cognitive, emotional, and physical impression formed by a customer across all touchpoints with a business.\n\nProduct Experience refers specifically to the user's direct functional, ergonomic, aesthetic, and emotional interactions while using a specific product."
+              "2. How does Design Thinking enhance customer experience?",
+              "Design Thinking enhances customer experience by discovering hidden pain points, reducing friction, aligning product functionality with expectations, and ensuring solutions are intuitive, meaningful, and emotionally satisfying."
             ],
             [
-              "3. What are the key parameters of Product Experience?",
-              "The key parameters are:\n- Usability: Intuitive layout, ease of learning, and low operational effort\n- Functionality: Effective execution of intended tasks and problem solution\n- Ergonomics: Physical and cognitive comfort, safety, and accessibility\n- Aesthetics: Sensory appeal, visual clarity, and form design\n- Emotional Resonance: Delight, trust, and satisfaction experienced during interaction"
+              "3. State key parameters of product experience.",
+              "Product experience is evaluated through several key parameters:\n- Usability: How easily and intuitively users interact with the product.\n- Functionality: How effectively the product solves the core problem.\n- Emotional Appeal: How the product makes the user feel during interaction.\n- Ergonomics & Aesthetics: Comfort, safety, visual design, and physical interface."
             ],
             [
-              "4. How does Design Thinking align customer expectations with product design?",
-              "Design Thinking aligns customer expectations by involving real users continuously throughout development. By observing behaviors during empathy research and testing early low-fidelity prototypes, teams validate features against true user expectations rather than internal assumptions."
-            ],
-            [
-              "5. What are common real-world customer challenges addressed through Design Thinking?",
-              "Common challenges include:\n- Overly complex or confusing user interfaces in software\n- High friction and delays during service onboarding or purchasing\n- Lack of physical ergonomics or accessibility for diverse user groups\n- Products that fail to fit into users' real daily operational routines"
+              "4. Give examples of real-world customer challenges addressed through Design Thinking.",
+              "Examples include streamlining complex online booking processes, redesigning medical scanning devices to reduce anxiety for children, and simplifying mobile banking interfaces for non-technical users."
             ]
           ]
         },
-        "Global Success Stories in Design Thinking": {
+        "Global Success Stories": {
           "cards": [
             [
-              "1. How did Airbnb use Design Thinking to transform its business?",
-              "Faced with low revenue in 2009, Airbnb founders realized through user empathy that listings contained poor-quality photos. They traveled to hosts' homes, took high-resolution photographs, and redesigned the search experience, leading to immediate revenue growth and establishing trust in online home-sharing."
-            ],
-            [
-              "2. What role does Design Thinking play in Apple's product strategy?",
-              "Apple applies human-centered Design Thinking to minimize technological complexity, prioritizing intuitive physical ergonomics, seamless hardware-software integration, and minimalist aesthetic design that resonates emotionally with users."
-            ],
-            [
-              "3. What is IDEO's contribution to Design Thinking?",
-              "IDEO pioneered human-centered design as a formal business methodology. They popularized key techniques such as multidisciplinary group brainstorming, rapid low-fidelity prototyping, empathy mapping, and user testing across various global industries."
-            ],
-            [
-              "4. How did Netflix leverage Design Thinking and customer centricity?",
-              "Netflix recognized customer frustrations with video store late fees and physical rental hassles. By focusing on user convenience, they continuously evolved their business model—transitioning from mail-order DVDs to frictionless video streaming and personalized recommendation algorithms."
+              "1. Explain how global companies like Airbnb, Apple, IDEO, and Netflix used Design Thinking for business success.",
+              "Global success stories illustrate how design-based innovation transforms business models:\n- Airbnb: Redesigned listing photos and user journey to build trust, rescuing the business from failure.\n- Apple: Integrated seamless hardware-software design focused on user intuition and elegant aesthetic experience.\n- IDEO: Pioneered human-centered design methodologies to create iconic products like the first Apple mouse.\n- Netflix: Shifted from DVD rentals to streaming and original content based on deep understanding of changing user content consumption habits."
             ]
           ]
         }
@@ -86,23 +71,155 @@ window.studyContent = {
     },
     "Unit 2: Learning to Empathize and Define the Problem": {
       "topics": {
-        "Empathy in Innovation and Design Tools": {
+        "Empathize Stage and Empathy Tools": {
           "cards": [
             [
-              "1. What is Empathy in Design Thinking?",
-              "Empathy is the ability to deeply observe, understand, and share the feelings, perspectives, physical context, and hidden motivations of users without projecting personal biases."
+              "1. Define the Empathize stage in Design Thinking.",
+              "The Empathize stage involves gaining a deep, unbiased understanding of users, their lived experiences, behaviors, motivations, and underlying emotional needs through active observation, engagement, and immersive study."
             ],
             [
               "2. Why is empathy critical in the innovation process?",
-              "Empathy is critical because it:\n- Uncovers implicit, unstated needs that traditional surveys miss\n- Prevents designers from assuming they know what users want\n- Connects product features directly to human emotional and practical pain points\n- Ensures resources are spent solving true underlying problems rather than symptoms"
+              "Empathy prevents designers from building products based on assumptions or self-bias. It uncovers unstated needs, identifies hidden pain points, and ensures final solutions resonate authentically with end users."
             ],
             [
-              "3. What design tools and techniques are used to develop user empathy?",
-              "Primary empathy tools include:\n- Empathy Maps: Categorizing insights into what the user Says, Thinks, Does, and Feels\n- Contextual Observation: Observing users operating in their natural environment\n- In-Depth Semi-Structured Interviews: Open-ended conversations capturing emotional stories\n- Customer Journey Maps: Documenting step-by-step touchpoints, pains, and emotional highs\n- Immersion and Shadowing: Experiencing the user's conditions firsthand"
+              "3. Name tools and techniques used to develop empathy with users.",
+              "Design tools for building empathy include:\n- User Interviews: Direct qualitative discussions to gather user stories.\n- Direct Observation & Shadowing: Watching users interact with products in their natural environments.\n- Empathy Maps: Classifying user insights into what they Say, Think, Do, and Feel.\n- Journey Mapping: Documenting step-by-step user interactions and emotional touchpoints."
             ],
             [
-              "4. What takes place during the Empathize stage of Design Thinking?",
-              "During the Empathize stage, designers immerse themselves in user environments, gather qualitative behavioral data, listen to user stories, and map pain points to build a solid foundation of human understanding before defining solutions."
+              "4. How do designers observe and assimilate unstructured information?",
+              "Designers gather qualitative observational data, interview transcripts, and behavioral notes, then synthesize this raw unstructured information using affinity diagrams and theme mapping to form clear, solvable problem frames."
+            ]
+          ]
+        },
+        "Individual Differences and Uniqueness": {
+          "cards": [
+            [
+              "1. What is meant by individual differences and uniqueness in design thinking?",
+              "Individual differences refer to the distinct background, cognitive style, cultural context, and personal perspective each user and team member possesses. Design thinking values uniqueness to foster diverse, inclusive, and rich creative solutions."
+            ],
+            [
+              "2. How do group discussions and activities encourage appreciation of individual differences?",
+              "Group discussions and collaborative design activities bring varied viewpoints together, challenging cognitive biases, encouraging empathy among team members, and leveraging diverse insights to solve complex challenges."
+            ]
+          ]
+        },
+        "Define Stage and Wicked Problems": {
+          "cards": [
+            [
+              "1. What is the Define stage in Design Thinking?",
+              "The Define stage involves analyzing and synthesizing empathy findings to formulate a clear, focused, human-centered problem statement (often expressed as a 'How Might We' question)."
+            ],
+            [
+              "2. What is a wicked problem? State its key characteristics.",
+              "A wicked problem is a complex, ill-defined, and highly interconnected challenge that lacks a definitive problem statement or single right answer.\n- Incomplete or changing requirements.\n- High degree of social, economic, or environmental complexity.\n- Solutions generate unexpected consequences rather than simple fixes."
+            ],
+            [
+              "3. Explain how wicked problems are identified and the impact of their solutions.",
+              "Wicked problems are identified by looking for systemic issues around us, such as urban traffic congestion or healthcare access. Solutions require consensus among diverse stakeholders and have long-term potential impacts across entire ecosystems."
+            ]
+          ]
+        }
+      }
+    },
+    "Unit 3: Ideate, Prototype and Implement": {
+    "topics": {
+      "Templates and Techniques of Ideation": {
+        "cards": [
+          [
+            "1. Define the Ideate stage in Design Thinking.",
+            "The Ideate stage focuses on generating a high volume and wide variety of creative ideas and potential solutions without immediate judgment or criticism."
+          ],
+          [
+            "2. Explain Brainstorming as an ideation template.",
+            "Brainstorming is a group creativity technique designed to generate a large number of ideas for the solution of a problem.\n- Encourages wild ideas and defers criticism.\n- Builds on the ideas of others to uncover novel paths.\n- Focuses on quantity first before filtering for quality."
+          ],
+          [
+            "3. Explain Systems Thinking as an ideation template.",
+            "Systems Thinking is an analytical approach that views a problem as part of an interconnected ecosystem rather than an isolated issue.\n- Examines relationships, feedback loops, and dependencies across elements.\n- Helps design holistic solutions that prevent unintended side effects."
+          ],
+          [
+            "4. How can consensus be reached during brainstorming on wicked problems?",
+            "Consensus on wicked problems is achieved by using structured voting templates, affinity mapping to group related ideas, defining clear evaluation criteria, and facilitating collaborative discussion among diverse stakeholders."
+          ]
+        ]
+      },
+      "Customer Experience Mapping for Ideation": {
+        "cards": [
+          [
+            "1. What is Customer Experience Mapping and how is it used in ideation?",
+            "Customer Experience Mapping visualizes the step-by-step journey of a user interacting with a product or service across various touchpoints.\n- Highlights emotional peaks, valleys, and friction points.\n- Pinpoints specific opportunities where new ideas can improve user satisfaction."
+          ],
+          [
+            "2. State steps involved in mapping customer experience.",
+            "Key steps in experience mapping:\n- Define the target user persona and scenario.\n- List sequential actions and touchpoints taken by the user.\n- Identify user emotions, thoughts, and pain points at each stage.\n- Analyze gaps to brainstorm targeted design improvements."
+          ]
+        ]
+      },
+      "Prototyping Methods and Rapid Prototyping": {
+        "cards": [
+          [
+            "1. Define the Prototype stage and explain its purpose.",
+            "The Prototype stage involves building low-cost, scaled-down physical or digital versions of ideas to explore, test, and validate concepts with users before committing resources."
+          ],
+          [
+            "2. What is Rapid Prototyping?",
+            "Rapid Prototyping is the quick fabrication of tangible mockups or digital wireframes used to rapidly test design concepts, gather immediate feedback, and iterate without spending significant time or money."
+          ],
+          [
+            "3. State common methods of prototyping.",
+            "Common prototyping methods include:\n- Paper Prototypes & Storyboards: Quick sketches illustrating user interfaces and flow.\n- Physical 3D Models: Low-fidelity foam, cardboard, or 3D-printed physical representations.\n- Digital Wireframes & Interactive Mockups: Clickable prototypes built with digital tools."
+          ]
+        ]
+      },
+      "Implementation in Design Thinking": {
+        "cards": [
+          [
+            "1. Explain the Implementation stage in a design thinking project.",
+            "The Implementation stage transforms verified prototypes into final, functional, market-ready products or services.\n- Involves detailed engineering, production, resource allocation, and market strategy.\n- Ensures the human-centered vision is maintained through final launch."
+          ]
+        ]
+      }
+    }
+    },
+    "Unit 4: Feedback, Re-Design & Re-Create": {
+      "topics": {
+        "Feedback Loops and User Experience": {
+          "cards": [
+            [
+              "1. What is a feedback loop in Design Thinking?",
+              "A feedback loop is a continuous process where user reactions, data, and test observations are collected, analyzed, and fed back into previous stages to refine, re-design, and improve the product."
+            ],
+            [
+              "2. State key elements of an effective feedback loop.",
+              "Elements of an effective feedback loop include:\n- Observation & Capture: Gathering explicit user reactions during testing.\n- Analysis: Identifying underlying reasons for user struggles or praise.\n- Iteration: Applying insights directly to re-design and re-create solutions."
+            ],
+            [
+              "3. Explain ergonomic challenges in user-focused design.",
+              "Ergonomic challenges relate to how well a product physically and cognitively fits human body dimensions, capabilities, and comfort.\n- Physical Ergonomics: Reducing strain, improving posture, and physical accessibility.\n- Cognitive Ergonomics: Reducing mental load, confusion, and interface complexity."
+            ]
+          ]
+        },
+        "Final Concept Testing": {
+          "cards": [
+            [
+              "1. Define Concept Testing and explain its significance.",
+              "Concept Testing is the process of presenting high-fidelity prototypes or developed concepts to target end-users to evaluate user acceptance, usability, value proposition, and overall market feasibility before full launch."
+            ],
+            [
+              "2. How does concept testing guide the Re-Design and Re-Create phase?",
+              "Concept testing reveals unaddressed usability flaws or missing features, providing evidence-based insights that dictate necessary adjustments, structural re-designs, or complete feature re-creations."
+            ]
+          ]
+        },
+        "Final Presentation and Problem Solving": {
+          "cards": [
+            [
+              "1. What is the purpose of a final presentation in a design thinking project?",
+              "The final presentation communicates the complete design journey—from initial user empathy and problem definition to validated prototypes and business impact—to persuade stakeholders and secure backing for implementation."
+            ],
+            [
+              "2. Explain how final presentations demonstrate innovative problem-solving.",
+              "A final presentation demonstrates problem-solving by showcasing key user insights, justifying design decisions through evidence gathered during testing, and showing how the creative solution directly solves the original user challenge."
             ]
           ]
         }
