@@ -16,6 +16,9 @@
     <span class="divider"></span>
     <button id="center" title="Center canvas" aria-label="Center canvas"></button>
     <button id="theme" title="Use dark mode" aria-label="Use dark mode" aria-pressed="false"></button>
+    <label class="subject-control">Subject
+      <select id="subject" aria-label="Content subject"></select>
+    </label>
     <label class="language-control">Language
       <select id="language" aria-label="Content language">
         <option value="english">English</option>
@@ -44,9 +47,11 @@
   <main id="viewport" aria-label="Flashcard mind map">
     <section id="menu" class="menu-screen" aria-label="Syllabus topics">
       <div id="topic-menu" class="menu-panel">
+        <button id="back-subjects" class="back-button" hidden>Back to subjects</button>
         <button id="back-units" class="back-button" hidden>Back to units</button>
-        <h1 id="menu-title">Units</h1>
-        <div id="unit-list" class="topic-list"></div>
+        <h1 id="menu-title">Subjects</h1>
+        <div id="subject-list" class="topic-list"></div>
+        <div id="unit-list" class="topic-list" hidden></div>
         <div id="topic-list" class="topic-list" hidden></div>
       </div>
     </section>

@@ -1,9 +1,92 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
-const studyData = window.studyData || {};
-let units = studyData.english?.units || {};
+
+function getNormalizedStudyData() {
+  const raw = window.studyData || {};
+  if (window.studyContent && !raw.english) {
+    raw.english = window.studyContent;
+  }
+  const normalized = {};
+
+  function addSubjectUnits(subjectName, lang, unitsObj) {
+    if (!subjectName || !unitsObj) return;
+    const sName = subjectName.trim();
+    const lName = (lang || "english").toLowerCase().trim();
+    if (!normalized[sName]) normalized[sName] = {};
+    if (!normalized[sName][lName]) normalized[sName][lName] = { units: {} };
+    Object.assign(normalized[sName][lName].units, unitsObj);
+  }
+
+  function inferSubjectName(unitsObj) {
+    if (!unitsObj || typeof unitsObj !== "object") return "Design Thinking";
+    const keys = Object.keys(unitsObj);
+    if (!keys.length) return "General";
+    for (const key of keys) {
+      if (/design thinking/i.test(key)) return "Design Thinking";
+      if (/computer network/i.test(key)) return "Computer Networks";
+      if (/operating system/i.test(key)) return "Operating Systems";
+    }
+    const match = keys[0].replace(/^Unit\s*\d+\s*:\s*/i, "").trim();
+    return match || "Subject 1";
+  }
+
+  for (const [key, val] of Object.entries(raw)) {
+    if (!val || typeof val !== "object") continue;
+    const isLangKey = /^(english|hinglish|hindi|spanish|french|german|lang)/i.test(key);
+
+    if (val.subjects && typeof val.subjects === "object") {
+      const lang = key;
+      for (const [sName, sObj] of Object.entries(val.subjects)) {
+        if (sObj && sObj.units) {
+          addSubjectUnits(sName, lang, sObj.units);
+        }
+      }
+    } else if (val.units && typeof val.units === "object") {
+      const lang = key;
+      const sName = val.subject || val.name || inferSubjectName(val.units);
+      addSubjectUnits(sName, lang, val.units);
+    } else if (isLangKey) {
+      for (const [subKey, subVal] of Object.entries(val)) {
+        if (subVal && typeof subVal === "object" && subVal.units) {
+          addSubjectUnits(subKey, key, subVal.units);
+        }
+      }
+    } else {
+      let foundLang = false;
+      for (const [subKey, subVal] of Object.entries(val)) {
+        if (subVal && typeof subVal === "object" && subVal.units) {
+          foundLang = true;
+          addSubjectUnits(key, subKey, subVal.units);
+        }
+      }
+      if (!foundLang && val.units) {
+        addSubjectUnits(key, "english", val.units);
+      }
+    }
+  }
+
+  if (window.studySubjects && typeof window.studySubjects === "object") {
+    for (const [sName, sVal] of Object.entries(window.studySubjects)) {
+      if (sVal && typeof sVal === "object") {
+        for (const [lKey, lVal] of Object.entries(sVal)) {
+          if (lVal && lVal.units) {
+            addSubjectUnits(sName, lKey, lVal.units);
+          }
+        }
+      }
+    }
+  }
+
+  return normalized;
+}
+
+let normalizedData = {};
+let currentSubject = "";
+let currentLanguage = "english";
 let currentUnit = "";
+let currentTopic = "";
 let topicData = {};
+
 const viewport = $("#viewport"),
   world = $("#world"),
   menu = $("#menu"),
@@ -11,47 +94,173 @@ const viewport = $("#viewport"),
   toolbar = $(".toolbar"),
   studyNav = $("#study-nav"),
   zoomLabel = $("#zoom");
-let currentTopic = "";
 
-const unitList = $("#unit-list"),
+const subjectList = $("#subject-list"),
+  unitList = $("#unit-list"),
   topicList = $("#topic-list"),
   menuTitle = $("#menu-title"),
-  backUnits = $("#back-units");
+  backSubjects = $("#back-subjects"),
+  backUnits = $("#back-units"),
+  subjectSelect = $("#subject"),
+  languageSelect = $("#language");
+
+function getSubjects() {
+  return Object.keys(normalizedData);
+}
+
+function getSubjectUnits(subjectName = currentSubject, lang = currentLanguage) {
+  const subj = normalizedData[subjectName];
+  if (!subj) return {};
+  if (subj[lang]?.units) return subj[lang].units;
+  if (subj.english?.units) return subj.english.units;
+  const firstLang = Object.keys(subj)[0];
+  return firstLang ? (subj[firstLang].units || {}) : {};
+}
+
+function populateSubjectDropdown() {
+  const subjects = getSubjects();
+  subjectSelect.replaceChildren();
+  subjects.forEach((subj) => {
+    const option = document.createElement("option");
+    option.value = subj;
+    option.textContent = subj;
+    subjectSelect.append(option);
+  });
+  if (currentSubject && subjects.includes(currentSubject)) {
+    subjectSelect.value = currentSubject;
+  } else if (subjects.length > 0) {
+    currentSubject = subjects[0];
+    subjectSelect.value = currentSubject;
+  }
+}
+
+function populateLanguageDropdown() {
+  const langs = new Set(["english", "hinglish"]);
+  Object.values(normalizedData).forEach((subj) => {
+    Object.keys(subj).forEach((lang) => langs.add(lang));
+  });
+  languageSelect.replaceChildren();
+  langs.forEach((lang) => {
+    const option = document.createElement("option");
+    option.value = lang;
+    option.textContent = lang.charAt(0).toUpperCase() + lang.slice(1);
+    languageSelect.append(option);
+  });
+  if (langs.has(currentLanguage)) {
+    languageSelect.value = currentLanguage;
+  } else {
+    currentLanguage = "english";
+    languageSelect.value = "english";
+  }
+}
+
 function buttonFor(name, handler) {
   const button = document.createElement("button");
   button.textContent = name;
   button.onclick = () => handler(button);
   return button;
 }
-function showUnits() {
+
+function showSubjects() {
   currentUnit = "";
   currentTopic = "";
   topicData = {};
-  menuTitle.textContent = "Units";
+  menuTitle.textContent = "Subjects";
   menuTitle.hidden = false;
-  unitList.hidden = false;
-  topicList.hidden = true;
-  topicList.replaceChildren();
+  backSubjects.hidden = true;
   backUnits.hidden = true;
-  unitList.replaceChildren(
-    ...Object.keys(units).map((name) => buttonFor(name, () => showUnit(name))),
+  subjectList.hidden = false;
+  unitList.hidden = true;
+  topicList.hidden = true;
+  subjectList.replaceChildren(
+    ...getSubjects().map((name) => buttonFor(name, () => showUnits(name)))
   );
 }
+
+function showUnits(name) {
+  if (name) currentSubject = name;
+  if (!currentSubject) {
+    const subjects = getSubjects();
+    currentSubject = subjects[0] || "";
+  }
+  if (subjectSelect.value !== currentSubject) {
+    subjectSelect.value = currentSubject;
+  }
+  currentUnit = "";
+  currentTopic = "";
+  topicData = {};
+  const units = getSubjectUnits(currentSubject, currentLanguage);
+  menuTitle.textContent = currentSubject;
+  menuTitle.hidden = false;
+  subjectList.hidden = true;
+  unitList.hidden = false;
+  topicList.hidden = true;
+  backSubjects.hidden = getSubjects().length <= 1;
+  backUnits.hidden = true;
+  unitList.replaceChildren(
+    ...Object.keys(units).map((unitName) => buttonFor(unitName, () => showUnit(unitName)))
+  );
+}
+
 function showUnit(name) {
   currentUnit = name;
-  topicData = units[name].topics;
+  const units = getSubjectUnits(currentSubject, currentLanguage);
+  topicData = units[name]?.topics || {};
   menuTitle.textContent = name;
   menuTitle.hidden = false;
+  subjectList.hidden = true;
   unitList.hidden = true;
   topicList.hidden = false;
+  backSubjects.hidden = true;
   backUnits.hidden = false;
   topicList.replaceChildren(
     ...Object.keys(topicData).map((topic) =>
-      buttonFor(topic, () => showFlashcard(topic)),
-    ),
+      buttonFor(topic, () => showFlashcard(topic))
+    )
   );
 }
-backUnits.onclick = showUnits;
+
+backSubjects.onclick = showSubjects;
+backUnits.onclick = () => showUnits(currentSubject);
+
+subjectSelect.onchange = (event) => {
+  const newSubj = event.target.value;
+  if (!newSubj || newSubj === currentSubject) return;
+  currentSubject = newSubj;
+  world.hidden = true;
+  studyNav.hidden = true;
+  menu.hidden = false;
+  toolbar.classList.remove("study-mode");
+  showUnits(currentSubject);
+};
+
+languageSelect.onchange = (event) => {
+  currentLanguage = event.target.value;
+  const units = getSubjectUnits(currentSubject, currentLanguage);
+
+  if (!world.hidden && currentTopic) {
+    const currentUnitObj = units[currentUnit];
+    if (currentUnitObj?.topics?.[currentTopic]) {
+      topicData = currentUnitObj.topics;
+      renderFlashcards();
+      updateFocus();
+      return;
+    }
+  }
+
+  world.hidden = true;
+  studyNav.hidden = true;
+  menu.hidden = false;
+  toolbar.classList.remove("study-mode");
+
+  if (currentUnit && units[currentUnit]) {
+    showUnit(currentUnit);
+  } else if (currentSubject && Object.keys(units).length > 0) {
+    showUnits(currentSubject);
+  } else {
+    showSubjects();
+  }
+};
 
 function formatAnswer(container, text) {
   const parts = text
@@ -472,20 +681,6 @@ const styleSelect = $("#text-style"),
   colorInput = $("#text-color"),
   widthInput = $("#text-width"),
   focusOpacity = $("#focus-opacity");
-$("#language").onchange = (event) => {
-  const lang = event.target.value;
-  const data = studyData[lang];
-  if (!data?.units) {
-    console.warn(`No content available for language: ${lang}`);
-    return;
-  }
-  units = data.units;
-  world.hidden = true;
-  studyNav.hidden = true;
-  menu.hidden = false;
-  toolbar.classList.remove("study-mode");
-  showUnits();
-};
 const textStyles = {
   question: { size: 21, color: "#29282d", font: "Excalifont" },
   answer: { size: 17, color: "#6e6b73", font: "Excalifont" },
@@ -613,4 +808,17 @@ themeButton.onclick = () =>
   setTheme(!document.documentElement.classList.contains("dark"));
 renderView();
 world.hidden = true;
-showUnits();
+normalizedData = getNormalizedStudyData();
+populateSubjectDropdown();
+populateLanguageDropdown();
+
+const initialSubjects = getSubjects();
+if (initialSubjects.length > 1) {
+  currentSubject = initialSubjects[0];
+  subjectSelect.value = currentSubject;
+  showSubjects();
+} else if (initialSubjects.length === 1) {
+  showUnits(initialSubjects[0]);
+} else {
+  showSubjects();
+}
