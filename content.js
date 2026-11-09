@@ -563,3 +563,326 @@ window.studyData.english.subjects["Time Series Analysis"] = {
     }
   }
 };
+
+// -----------------------------------------------------------------------------
+// DSE303: Machine Learning - Unit 1: Complete Exam Question Bank Flashcards
+// -----------------------------------------------------------------------------
+window.studyData = window.studyData || {};
+window.studyData.english = window.studyData.english || {};
+window.studyData.english.subjects = window.studyData.english.subjects || {};
+
+window.studyData.english.questions = window.studyData.english.questions || {};
+
+window.studyData.english.questions["Machine Learning"] = {
+  "units": {
+    "Part A: 1 Mark Questions": {
+      "topics": {
+        "Q1 - Q4: ML Basics & Definitions": {
+          "cards": [
+            [
+              "1. Define Machine Learning.",
+              "Machine Learning (ML) is a branch of Artificial Intelligence (AI) enabling computers to learn from data.\n- Core Mechanism: Learns patterns from experience without being explicitly programmed for every task.\n- Example: Gmail automatically detects and filters spam emails using ML models."
+            ],
+            [
+              "2. Who is known as the father of Machine Learning?",
+              "Arthur Samuel is recognized as the father of Machine Learning.\n- Historical Milestone: He coined the term 'Machine Learning' in 1959.\n- Breakthrough: Developed a self-learning computer checkers program in 1952."
+            ],
+            [
+              "3. What is Artificial Intelligence?",
+              "Artificial Intelligence (AI) is a branch of computer science focused on building smart machines.\n- Primary Goal: Enables machines to perform tasks requiring human intelligence.\n- Core Capabilities: Reasoning, problem-solving, learning, perception, and automated decision-making."
+            ],
+            [
+              "4. What is a dataset?",
+              "A dataset is an organized collection of related data used to build Machine Learning models.\n- Purpose: Serves as the source for training, testing, and evaluating ML algorithms.\n- Example: A student table containing Roll No, Age, Attendance, and Exam Marks."
+            ]
+          ]
+        },
+        "Q5 - Q8: Algorithms, Learning Types & Applications": {
+          "cards": [
+            [
+              "5. Define an algorithm.",
+              "An algorithm is a finite, step-by-step sequence of well-defined computational instructions.\n- Function: Takes inputs, processes them through logical steps, and produces a valid output.\n- In ML: Optimizes mathematical parameters to recognize patterns from training data."
+            ],
+            [
+              "6. What is supervised learning?",
+              "Supervised Learning is a category of ML where algorithms learn from labelled training data.\n- Input & Target: Both input features (X) and correct output labels (Y) are provided during training.\n- Objective: Learns a mapping function Y = f(X) to accurately predict labels for new, unseen data."
+            ],
+            [
+              "7. What is unsupervised learning?",
+              "Unsupervised Learning is a category of ML where algorithms analyze unlabelled data.\n- No Supervision: Data has input features (X) without any target labels (Y).\n- Objective: Discovers inherent groupings, hidden patterns, and data distributions (e.g. clustering)."
+            ],
+            [
+              "8. Give two examples of Machine Learning applications.",
+              "Machine Learning powers diverse everyday real-world systems:\n- Email Spam Filtering: Automatically identifies and diverts spam messages.\n- Facial Recognition: Biometric verification in smartphones, security checkpoints, and surveillance."
+            ]
+          ]
+        },
+        "Q9 - Q12: Features, Labels, Matrices & Tensors": {
+          "cards": [
+            [
+              "9. What is a feature in Machine Learning?",
+              "A feature is an individual measurable property or variable used as an input to a model.\n- Representation: Forms columns in structured datasets, denoted as input vector x.\n- Example: Age, height, weight, and blood pressure are features for predicting health status."
+            ],
+            [
+              "10. What is a label in Machine Learning?",
+              "A label is the final ground-truth target variable that a supervised model learns to predict.\n- Role: Provides the correct output answer during training to compute prediction error.\n- Example: 'Spam' or 'Not Spam' in email classification; 'Pass' or 'Fail' in student results."
+            ],
+            [
+              "11. Define a matrix.",
+              "A matrix is a two-dimensional rectangular array of numbers arranged into rows and columns.\n- Notation: An m × n matrix has m rows and n columns.\n- Example: A = [[1, 2], [3, 4]] represents a 2 × 2 square matrix storing numerical features."
+            ],
+            [
+              "12. What is a tensor?",
+              "A tensor is a generalized multidimensional mathematical data container.\n- Dimension Hierarchy: 0D tensor is a scalar, 1D is a vector, 2D is a matrix, 3D+ is a higher-order tensor.\n- Deep Learning: Color images are represented as 3D tensors (Height × Width × RGB Channels)."
+            ]
+          ]
+        },
+        "Q13 - Q16: Vectors, Eigenvalues, Eigenvectors & Scalars": {
+          "cards": [
+            [
+              "13. What is a vector?",
+              "A vector is an ordered 1-dimensional array of numbers representing magnitude and direction.\n- Types: Row vector [x₁, x₂] or column vector [x₁, x₂]ᵀ.\n- ML Role: Represents a single data sample's feature values in an n-dimensional feature space."
+            ],
+            [
+              "14. Define eigenvalue.",
+              "An eigenvalue is a scalar scalar factor (λ) by which an eigenvector scales during transformation.\n- Scaling Effect: Indicates how much the eigenvector stretches, shrinks, or reverses.\n- Formula: Av = λv (where A is square matrix, v is eigenvector, λ is eigenvalue)."
+            ],
+            [
+              "15. Define eigenvector.",
+              "An eigenvector is a non-zero vector (v) whose spatial direction remains unchanged under transformation.\n- Invariant Direction: Matrix multiplication only scales its length, never rotating its line of action.\n- Characteristic Equation: Av = λv (only valid for square matrices)."
+            ],
+            [
+              "16. What is a scalar?",
+              "A scalar is a single numeric quantity having only magnitude with no directional component.\n- Dimension: A 0-dimensional tensor.\n- Examples: 5, -12, 3.14; hyper-parameters like learning rate (α) and regularization factor (λ)."
+            ]
+          ]
+        },
+        "Q17 - Q20: Linear Algebra & Matrix Types": {
+          "cards": [
+            [
+              "17. What is Linear Algebra?",
+              "Linear Algebra is the mathematical branch dealing with linear equations, vectors, and matrices.\n- ML Foundation: Serves as the primary computational language for handling multi-variable data.\n- Core Tools: Vector spaces, matrix transformations, dot products, eigenvalues, and decompositions."
+            ],
+            [
+              "18. What is a square matrix?",
+              "A square matrix is a matrix having an identical number of rows and columns (m = n).\n- Order: An n × n matrix is called a square matrix of order n.\n- Properties: Required for calculating determinants, matrix inverses, and eigenvalues/eigenvectors."
+            ],
+            [
+              "19. What is the transpose of a matrix?",
+              "The transpose of matrix A (denoted Aᵀ) is obtained by flipping rows and columns.\n- Transformation: The element at row i, column j moves to row j, column i (Aᵀ_ji = A_ij).\n- Dimension Swap: If A is m × n, then Aᵀ is n × m."
+            ],
+            [
+              "20. Name two types of Machine Learning.",
+              "The two primary foundational paradigms of Machine Learning are:\n- Supervised Learning: Models trained using paired inputs and ground-truth output labels.\n- Unsupervised Learning: Models trained to detect patterns and groupings on unlabelled data."
+            ]
+          ]
+        }
+      }
+    },
+    "Part B: 2 Mark Questions": {
+      "topics": {
+        "Q1 - Q4: ML Foundations, Applications & History": {
+          "cards": [
+            [
+              "1. Define Machine Learning and explain its importance.",
+              "Machine Learning enables computers to learn from historical data and make automated decisions without manual programming.\n- Automation: Automates repetitive, complex data processing workflows.\n- Predictive Accuracy: Continuously updates internal parameters to refine forecast accuracy.\n- Scalability & Speed: Analyzes massive big-data volumes beyond human capacity.\n- Example: E-commerce platforms recommend tailored products based on browsing behavior."
+            ],
+            [
+              "2. Write any two applications of Machine Learning.",
+              "Machine Learning provides critical automated decision-making across modern domains:\n- Healthcare: Diagnostic models analyze radiological scans to detect tumors and predict patient health risks.\n- Banking & Fraud Detection: Real-time fraud detection engines analyze card transactions to flag suspicious activity.\n- Other Applications: Self-driving vehicles, speech assistants, facial recognition, and algorithmic trading."
+            ],
+            [
+              "3. Differentiate between Artificial Intelligence and Machine Learning.",
+              "Artificial Intelligence and Machine Learning operate at different levels of abstraction:\n- Scope: AI is the broad science of creating intelligent machines; ML is a specialized subset of AI.\n- Mechanism: AI includes rule-based logic and symbolic systems; ML specifically learns models from empirical data.\n- Dependency: AI can function on static heuristic rules; ML requires training datasets and learning algorithms.\n- Examples: Rule-based chess solver (AI); email spam classifier trained on user inbox data (ML)."
+            ],
+            [
+              "4. Explain the history of Machine Learning briefly.",
+              "Machine Learning evolved over seven decades of theoretical and technological breakthroughs:\n- 1950: Alan Turing proposed the Turing Test for testing machine intelligence.\n- 1952-1959: Arthur Samuel built a self-learning checkers program and coined 'Machine Learning'.\n- 1980s: Backpropagation popularized Multi-Layer Perceptrons and neural network research.\n- 2000s-Present: Big Data, GPUs, and Deep Learning powered breakthroughs in vision, speech, and generative AI."
+            ]
+          ]
+        },
+        "Q5 - Q8: Advantages, Paradigms, Elements & Scope": {
+          "cards": [
+            [
+              "5. Write two advantages of Machine Learning.",
+              "Machine Learning offers transformative operational advantages over traditional programming:\n- Automated Pattern Discovery: Discovers non-linear, multi-variable patterns hidden in high-dimensional data.\n- Continuous Improvement: Automatically refines performance and adapts over time as new data is ingested.\n- Operational Efficiency: Reduces manual human labor and delivers rapid real-time predictions."
+            ],
+            [
+              "6. Differentiate between supervised and unsupervised learning.",
+              "Supervised and Unsupervised Learning differ fundamentally in data annotation and learning goals:\n- Training Data: Supervised uses labelled data (input X + output Y); Unsupervised uses unlabelled data (input X only).\n- Feedback Mechanism: Supervised uses direct loss feedback between prediction and label; Unsupervised has no label feedback.\n- Core Tasks: Supervised solves classification and regression; Unsupervised solves clustering and dimensionality reduction.\n- Examples: Spam email detection (Supervised) vs customer market basket segmentation (Unsupervised)."
+            ],
+            [
+              "7. What are the key elements of Machine Learning?",
+              "A robust Machine Learning system depends on six interconnected pipeline elements:\n- Data: Raw historical information collected for model training.\n- Features: Individual measurable explanatory variables extracted from raw data.\n- Algorithm: The optimization procedure used to discover patterns (e.g. SVM, Decision Tree).\n- Model: The trained mathematical function with learned weights ready for inference.\n- Training & Evaluation: Optimizing weights via loss minimization and validating on test data."
+            ],
+            [
+              "8. Explain the future scope of Machine Learning.",
+              "Machine Learning is poised to revolutionize industrial and societal operations:\n- Autonomous Mobility: Safe navigation for level-5 self-driving cars, delivery drones, and logistics robots.\n- Precision Medicine: Early biomarker detection, personalized cancer therapies, and automated drug discovery.\n- Smart Automation & Energy: AI-driven smart power grids, automated crop monitoring, and climate forecasting.\n- Human-AI Collaboration: Conversational agents, code assistants, and personalized educational systems."
+            ]
+          ]
+        },
+        "Q9 - Q12: Linear Algebra Concepts & Eigenpairs": {
+          "cards": [
+            [
+              "9. Define scalar, vector and matrix with examples.",
+              "Linear Algebra provides structural hierarchy for representing numerical data in ML:\n- Scalar (0D): A single numeric value representing magnitude. Example: Learning rate α = 0.01.\n- Vector (1D): An ordered 1D sequence of numbers representing an instance. Example: Feature vector v = [24, 70, 175]ᵀ.\n- Matrix (2D): A 2D rectangular grid of rows and columns storing datasets. Example: Design matrix X = [[1, 2], [3, 4]].\n- Practical Role: Entire datasets are ingested and transformed using matrix operations."
+            ],
+            [
+              "10. What is a tensor? Give an example.",
+              "A tensor is a generalized multidimensional array containing numerical data of uniform type:\n- Rank-0 Tensor: Scalar (e.g., single loss value).\n- Rank-1 Tensor: Vector (e.g., 1D embedding with 300 dimensions).\n- Rank-2 Tensor: Matrix (e.g., tabular dataset of 1000 rows × 10 features).\n- Rank-3+ Tensor: Multi-channel data (e.g., RGB image represented as Height × Width × 3 channels)."
+            ],
+            [
+              "11. Write any two properties of matrices.",
+              "Matrix addition satisfies foundational algebraic properties under dimension conformity:\n- Commutative Property of Addition: A + B = B + A (order of addition does not alter outcome).\n- Associative Property of Addition: (A + B) + C = A + (B + C) (grouping does not affect result).\n- Key Condition: Both matrices A and B must share identical row and column dimensions (m × n)."
+            ],
+            [
+              "12. What are eigenvalues and eigenvectors?",
+              "Eigenvalues and eigenvectors describe fundamental linear transformations of square matrices:\n- Mathematical Equation: Av = λv (where A is n × n matrix, v ≠ 0 is eigenvector, λ is scalar eigenvalue).\n- Eigenvector (v): A non-zero vector whose spatial direction remains invariant under transformation by A.\n- Eigenvalue (λ): The scalar scaling factor that stretches, compresses, or reverses eigenvector v.\n- ML Application: Principal Component Analysis (PCA) uses eigenvectors to identify axes of maximum data variance."
+            ]
+          ]
+        },
+        "Q13 - Q15: Matrix Multiplication, Role & Transpose": {
+          "cards": [
+            [
+              "13. What is matrix multiplication?",
+              "Matrix multiplication computes the dot product of rows from matrix A with columns of matrix B:\n- Dimensional Requirement: Columns in A must equal rows in B (if A is m × k and B is k × n, product AB is m × n).\n- Non-Commutative: In general, matrix multiplication is not commutative: AB ≠ BA.\n- Concrete Example: [1, 2] × [3, 4]ᵀ = (1 × 3) + (2 × 4) = 3 + 8 = 11.\n- In Neural Networks: Forward pass computation calculates layer activations as Z = WX + b."
+            ],
+            [
+              "14. Explain the role of Linear Algebra in Machine Learning.",
+              "Linear Algebra is the core mathematical engine driving machine learning algorithms:\n- Compact Data Representation: Tabular datasets are modeled as design matrices (X) and target vectors (y).\n- High-Speed Vectorized Computing: GPU hardware accelerates parallel matrix multiplications in deep networks.\n- Dimensionality Reduction: PCA extracts dominant feature directions via eigendecomposition and SVD.\n- Parameter Optimization: Ordinary Least Squares (OLS) calculates optimal weights using (XᵀX)⁻¹Xᵀy."
+            ],
+            [
+              "15. What is the transpose of a matrix? Give an example.",
+              "The transpose of matrix A (denoted Aᵀ) exchanges row indices with column indices:\n- Rule: Element at row i and column j moves to row j and column i: (Aᵀ)_ji = A_ij.\n- Dimension Change: An m × n matrix becomes an n × m transposed matrix.\n- Example: If A = [[1, 2], [3, 4]], then Aᵀ = [[1, 3], [2, 4]].\n- ML Usage: Transpose aligns vector dimensions to compute inner products and dot products (xᵀw)."
+            ]
+          ]
+        }
+      }
+    },
+    "Part C: 5 Mark Questions": {
+      "topics": {
+        "Q1 - Q4: ML Evolution, Elements, Apps & Learning Types": {
+          "cards": [
+            [
+              "1. Explain the definition, history and evolution of Machine Learning.",
+              "Machine Learning enables computational systems to infer patterns from data and generalize to unseen instances.\n- Definition: A field of AI where algorithms improve performance on task T through experience E measured by P.\n- 1950s (Foundations): Alan Turing proposed machine intelligence; Arthur Samuel created the checkers program (1952) and coined ML (1959).\n- 1980s (Connectionism): Resurgence of artificial neural networks via backpropagation optimization.\n- 1990s (Statistical ML): Rigorous mathematical algorithms dominated (SVM, Decision Trees, Random Forests).\n- 2000s-Present (Deep Learning): Massive datasets, cloud computing, and GPU parallelism spurred modern Deep Learning and LLMs."
+            ],
+            [
+              "2. Discuss the basic concepts and key elements of Machine Learning.",
+              "Machine Learning relies on systematic concepts to transform empirical data into predictive models:\n- Core Concepts: Data (historical observations), Features (input attributes X), Labels (ground truth Y), and Model (hypothesis function).\n- 1. Data Collection & Preprocessing: Ingestion, cleaning missing values, handling outliers, and scaling.\n- 2. Feature Engineering: Selecting and extracting high-impact predictive variables.\n- 3. Training & Optimization: Algorithms minimize empirical loss by updating internal model parameters.\n- 4. Evaluation & Inference: Assessing generalization error on unseen test splits using accuracy, precision, and RMSE."
+            ],
+            [
+              "3. Explain the different applications of Machine Learning in real-world scenarios.",
+              "Machine Learning powers intelligent automation across critical economic and scientific sectors:\n- Healthcare: Automated diagnostic image classification (MRI/CT scans), patient deterioration forecasting, and drug discovery.\n- Finance & Banking: Credit scoring, high-frequency algorithmic trading, anti-money laundering, and fraud detection.\n- Retail & E-Commerce: Personalized collaborative-filtering recommendation engines and dynamic inventory pricing.\n- Autonomous Transportation: Computer vision and reinforcement learning driving self-driving vehicles and route optimization.\n- Digital Assistants & NLP: Speech recognition, language translation, and conversational generative AI."
+            ],
+            [
+              "4. Differentiate between supervised and unsupervised learning with suitable examples.",
+              "Supervised and Unsupervised Learning represent the two foundational pillars of machine learning:\n- Input Data: Supervised requires paired inputs with ground-truth target labels (x_i, y_i); Unsupervised operates strictly on unlabelled inputs (x_i).\n- Core Objective: Supervised learns mapping function y = f(x) for prediction; Unsupervised models underlying data structure, clusters, or probability distributions.\n- Common Tasks: Supervised handles Classification and Regression; Unsupervised handles Clustering, Dimensionality Reduction, and Association Rules.\n- Representative Algorithms: Supervised uses Linear/Logistic Regression, Decision Trees, SVM; Unsupervised uses K-Means, DBSCAN, and PCA.\n- Concrete Examples: Predicting house prices based on square footage (Supervised) vs clustering customer personas by purchasing habits (Unsupervised)."
+            ]
+          ]
+        },
+        "Q5 - Q8: Future Scope, Linear Algebra & Matrices": {
+          "cards": [
+            [
+              "5. Explain the future scope and importance of Machine Learning.",
+              "Machine Learning has evolved from academic theory into a foundational driver of technological progress:\n- Operational Importance: Eliminates manual heuristic rule writing, scales decision-making, and uncovers non-linear insights.\n- Autonomous Robotics: Next-generation robots performing hazardous manufacturing, warehouse logistics, and surgical interventions.\n- Precision Healthcare: Genomic sequencing analysis, personalized medicine plans, and proactive epidemic modeling.\n- Climate & Sustainable Energy: Optimizing smart electric grids, wind-turbine efficiency, and hyper-local crop-yield forecasts.\n- Education: Adaptive learning platforms tailoring lesson pacing and curriculum difficulty to individual student capabilities."
+            ],
+            [
+              "6. Explain the different data structures used in Linear Algebra: Scalar, Vector, Matrix and Tensor.",
+              "Linear Algebra structures represent and manipulate numerical data across dimensional hierarchies:\n- Scalar (0D Tensor): Single numerical value; represents parameters such as loss value or learning rate α (e.g. s = 5).\n- Vector (1D Tensor): 1D array of ordered numbers; represents a single instance's feature attributes (e.g. v = [x₁, x₂, x₃]ᵀ).\n- Matrix (2D Tensor): 2D array of m rows and n columns; standard tabular design matrix where rows represent samples and columns represent features.\n- Tensor (Rank-3+): Higher-order multidimensional array; represents spatial and temporal data such as RGB images (H × W × C) or video batches (B × T × H × W × C).\n- Significance: Unified tensor abstractions allow deep learning frameworks (TensorFlow, PyTorch) to optimize computations."
+            ],
+            [
+              "7. Explain tensor operations with suitable examples.",
+              "Tensor operations provide the algebraic foundation for calculating neural layer outputs:\n- Element-wise Addition & Subtraction: Evaluates corresponding elements across identical shapes: A + B and A − B.\n- Element-wise Multiplication (Hadamard): Denoted as A ⊙ B; for [[1, 2], [3, 4]] ⊙ [[5, 6], [7, 8]] = [[5, 12], [21, 32]].\n- Matrix/Dot Multiplication: Dot product of rows and columns: [[1, 2], [3, 4]] × [[5, 6], [7, 8]] = [[19, 22], [43, 50]].\n- Transpose & Reshaping: Swapping axes (Aᵀ) and rearranging dimensions without mutating underlying memory (e.g. flat vector of 4 elements to 2 × 2 matrix).\n- Neural Applications: Used in convolutional filters, attention mechanisms, and backpropagation gradient flow."
+            ],
+            [
+              "8. Describe the important properties of matrices.",
+              "Matrix algebra exhibits distinct properties that govern data transformations and algorithms:\n- Commutative Addition: A + B = B + A (valid when dimensions match).\n- Associative Addition & Multiplication: (A + B) + C = A + (B + C) and (AB)C = A(BC).\n- Distributive Law: A(B + C) = AB + AC.\n- Identity Element: Multiplying by identity matrix leaves matrix unchanged: AI = IA = A.\n- Transpose Properties: (A + B)ᵀ = Aᵀ + Bᵀ, (Aᵀ)ᵀ = A, and (AB)ᵀ = BᵀAᵀ (reverses order).\n- Non-Commutative Multiplication: In general, AB ≠ BA (order of transformation matters fundamentally)."
+            ]
+          ]
+        },
+        "Q9 - Q10: Eigenvalues, Eigenvectors & Matrix Operations": {
+          "cards": [
+            [
+              "9. Explain eigenvalues and eigenvectors with a suitable example.",
+              "Eigenvalues and eigenvectors identify invariant directions and scale factors during linear transformations:\n- Characteristic Equation: Av = λv or (A − λI)v = 0. Non-trivial solutions exist if determinant |A − λI| = 0.\n- Concrete Example: Let diagonal matrix A = [[2, 0], [0, 3]].\n- Finding Eigenvalues: |[[2 − λ, 0], [0, 3 − λ]]| = (2 − λ)(3 − λ) = 0 ⇒ λ₁ = 2, λ₂ = 3.\n- Finding Eigenvectors: For λ₁ = 2: (A − 2I)v = [[0, 0], [0, 1]][x, y]ᵀ = [0, 0]ᵀ ⇒ y = 0, choosing x = 1 yields v₁ = [1, 0]ᵀ.\n- For λ₂ = 3: (A − 3I)v = [[−1, 0], [0, 0]][x, y]ᵀ = [0, 0]ᵀ ⇒ x = 0, choosing y = 1 yields v₂ = [0, 1]ᵀ.\n- ML Application: Principal Component Analysis (PCA) uses eigenvectors of the covariance matrix as principal axes of variance."
+            ],
+            [
+              "10. Discuss the importance of matrix operations in Machine Learning.",
+              "Matrix operations form the core computational framework of machine learning algorithms:\n- Tabular Data Organization: Datasets with N samples and D features are stored compactly as N × D matrices.\n- Linear Regression Closed-Form: Normal Equation solves optimal weights analytically: w = (XᵀX)⁻¹Xᵀy.\n- Neural Network Forward Pass: Layer outputs are computed in one vectorized operation: a = σ(W · x + b).\n- Covariance & Correlation: Covariance matrix C = (1/N) XᵀX captures pairwise feature relationships.\n- Hardware Optimization: Matrix operations map natively onto SIMD vector units, GPUs, and TPUs for extreme parallelism."
+            ]
+          ]
+        }
+      }
+    },
+    "Part D: 8 Mark Questions": {
+      "topics": {
+        "Q1 - Q4: ML Comprehensive Overview, Key Elements, Paradigms & Math": {
+          "cards": [
+            [
+              "1. Define Machine Learning. Explain its history, evolution, future scope and real-world applications in detail.",
+              "Machine Learning is the subfield of AI focused on building systems that learn and adapt from data without following static rule-based instructions.\n- History & Evolution: 1950 (Turing Test) → 1959 (Arthur Samuel coins ML) → 1980s (Backpropagation) → 1990s (SVMs & Random Forests) → 2010s+ (Deep Learning & Generative AI).\n- Paradigm Shift: Traditional software takes Rules + Data → Answers; Machine Learning takes Data + Answers → Rules.\n- Real-World Applications: Healthcare (cancer detection), Finance (fraud alerts, algorithmic trading), Autonomous Vehicles, E-commerce recommendation engines, and Computer Vision.\n- Future Horizons: Fully autonomous robotic agents, personalized precision oncology, generative multi-modal reasoning, and smart climate management."
+            ],
+            [
+              "2. Explain the basic concepts and key elements of Machine Learning. Also discuss its importance in modern technology.",
+              "Machine Learning structures complex inductive reasoning through a formal end-to-end pipeline:\n- Foundational Concepts: Data (experience), Features (attributes X), Labels (targets Y), Hypothesis Space (model family), and Objective Function (loss).\n- 1. Data Collection & Preprocessing: Cleans noise, imputes missing values, and normalizes feature distributions.\n- 2. Feature Selection & Extraction: Identifies most discriminative variables to overcome the curse of dimensionality.\n- 3. Training & Validation: Iteratively optimizes weights via gradient descent while tuning hyperparameters via cross-validation.\n- 4. Evaluation & Deployment: Validates generalization on test sets using F1-score, ROC-AUC, or MAE before deploying as API.\n- Technological Importance: Automates cognitive tasks, unlocks actionable value from unstructured data, and enables real-time hyper-personalization."
+            ],
+            [
+              "3. Explain supervised and unsupervised learning in detail. Differentiate between them with suitable examples and applications.",
+              "Supervised and Unsupervised Learning represent distinct paradigms governing how models extract knowledge from datasets:\n- Supervised Learning: Learns from pairs (x_i, y_i) to approximate mapping y = f(x). Subdivided into Classification (discrete categories, e.g. Logistic Regression, Random Forest) and Regression (continuous values, e.g. Linear Regression, Gradient Boosting).\n- Unsupervised Learning: Operates on unlabelled inputs (x_i) to detect intrinsic clustering, density, or low-dimensional manifolds. Subdivided into Clustering (K-Means, Hierarchical), Association Rules (Apriori), and Dimensionality Reduction (PCA, t-SNE).\n- Key Differences: Supervised has explicit teacher signal/ground truth; Unsupervised discovers latent patterns autonomously without target metrics.\n- Supervised Applications: Credit risk scoring, spam filtering, tumor classification, and stock price forecasting.\n- Unsupervised Applications: Customer market segmentation, anomaly/fraud detection in network traffic, and genomic sequence clustering."
+            ],
+            [
+              "4. Explain the mathematical foundations of Machine Learning with reference to Linear Algebra, Scalars, Vectors, Matrices and Tensors.",
+              "Linear Algebra provides the language and mathematical scaffolding for formulating and solving machine learning problems:\n- Scalars (0D): Measure magnitude; define hyper-parameters like learning rate (α), regularization constants (λ), and loss values.\n- Vectors (1D): Represent individual feature records; vector dot products compute similarity metrics (cosine similarity) and linear combinations (wᵀx).\n- Matrices (2D): Form design matrices (X) where rows are instances and columns are features; matrix transformations rotate, scale, and project feature spaces.\n- Tensors (Rank-3+): Multidimensional containers essential for deep learning (e.g., image batches represented as Batch × Channels × Height × Width).\n- Core Mathematical Operations: Matrix inversion (XᵀX)⁻¹, eigendecomposition (A = VΛV⁻¹), Singular Value Decomposition (SVD), and vector norms (L1/L2 regularization)."
+            ]
+          ]
+        },
+        "Q5 - Q8: Tensors, Matrix Properties, Eigenvalues & Matrix Computations": {
+          "cards": [
+            [
+              "5. What are tensors? Explain different tensor operations with suitable examples.",
+              "A tensor is a geometric object that maps geometric vectors, scalars, and other tensors to numerical arrays across arbitrary dimensions:\n- Structural Hierarchy: Rank-0 (Scalar), Rank-1 (Vector), Rank-2 (Matrix), Rank-3 (Volume/Color Image), Rank-4 (Batch of Video Frames).\n- Element-Wise Arithmetic: Addition, subtraction, and Hadamard multiplication (A ⊙ B) performed on identical tensor shapes.\n- Tensor Contraction & Matrix Multiplication: Summing over specified index pairs; for matrices C_ij = Σ_k A_ik B_kj.\n- Transposition & Permutation: Rearranging tensor coordinate axes (e.g. PyTorch channel-first NCHW to TensorFlow channel-last NHWC).\n- Broadcasting & Reshaping: Automatically expanding lower-rank tensors across compatible dimensions during operations without memory replication.\n- Deep Learning Role: Forms the fundamental computational primitive in PyTorch, TensorFlow, and TPU hardware."
+            ],
+            [
+              "6. Explain the different properties of matrices and discuss their importance in Machine Learning.",
+              "Matrix algebra provides the formal algebraic rules enabling scalable data representation and manipulation:\n- Algebraic Properties: Addition is commutative (A + B = B + A) and associative ((A + B) + C = A + (B + C)); Multiplication is associative ((AB)C = A(BC)) and distributive (A(B + C) = AB + AC).\n- Non-Commutative Multiplication: In general, AB ≠ BA; transformations applied in different sequences yield different spatial mappings.\n- Transpose Identities: (A + B)ᵀ = Aᵀ + Bᵀ, (AB)ᵀ = BᵀAᵀ, and (Aᵀ)ᵀ = A.\n- Invertibility: A square matrix has an inverse A⁻¹ such that AA⁻¹ = I if and only if determinant det(A) ≠ 0.\n- Importance in ML: Enables closed-form linear regression solutions, vectorized neural network propagation, covariance matrix analysis, and spectral clustering."
+            ],
+            [
+              "7. Define eigenvalues and eigenvectors. Explain how to calculate eigenvalues and eigenvectors of a matrix with an example.",
+              "Eigenvalues and eigenvectors describe axes of invariant direction and their corresponding scaling factors under linear transformation:\n- Definition: For an n × n matrix A, a non-zero vector v is an eigenvector if Av = λv for scalar eigenvalue λ.\n- Step 1 (Characteristic Equation): Solve |A − λI| = 0 to obtain the characteristic polynomial and roots (eigenvalues).\n- Step 2 (Eigenvectors): For each λ, substitute into (A − λI)v = 0 and solve the homogeneous system for non-trivial vector v.\n- Worked Example: Let A = [[2, 0], [0, 3]]. Characteristic equation: |[[2 − λ, 0], [0, 3 − λ]]| = (2 − λ)(3 − λ) = 0 ⇒ λ₁ = 2, λ₂ = 3.\n- For λ₁ = 2: [[0, 0], [0, 1]][x, y]ᵀ = [0, 0]ᵀ ⇒ y = 0, choosing x = 1 gives v₁ = [1, 0]ᵀ.\n- For λ₂ = 3: [[−1, 0], [0, 0]][x, y]ᵀ = [0, 0]ᵀ ⇒ x = 0, choosing y = 1 gives v₂ = [0, 1]ᵀ.\n- ML Significance: Core mechanism of Principal Component Analysis (PCA) to project data along directions of maximal variance."
+            ],
+            [
+              "8. Explain different matrix operations used in Machine Learning, such as matrix addition, subtraction, multiplication, transpose and inverse.",
+              "Matrix operations provide the core computational building blocks of machine learning algorithms:\n- Addition & Subtraction: C = A ± B where C_ij = A_ij ± B_ij; used for updating neural layer bias vectors and computing residual errors.\n- Matrix Multiplication: Product C = AB where C_ij = Σ_k A_ik B_kj; powers dense layer forward passes, embedding projections, and convolutional filters.\n- Matrix Transpose: Aᵀ flips axes (row i ↔ col j); aligns vector shapes for inner products and calculates gram matrices (XᵀX).\n- Matrix Inverse: A⁻¹ satisfies AA⁻¹ = I; for 2 × 2 matrix [[a, b], [c, d]], A⁻¹ = (1/(ad − bc)) [[d, −b], [−c, a]] when det(A) ≠ 0.\n- Analytical Solutions: Closed-form parameter estimation in Ordinary Least Squares: w = (XᵀX)⁻¹Xᵀy.\n- Hardware Acceleration: Highly optimized BLAS/cuBLAS libraries execute these operations across massively parallel GPU CUDA cores."
+            ]
+          ]
+        }
+      }
+    },
+    "Part E: Exam Strategy & Priority Topics": {
+      "topics": {
+        "Exam Revision & High-Yield Strategy": {
+          "cards": [
+            [
+              "1. What are the highest priority topics for 5-mark and 8-mark questions?",
+              "The complete question bank highlights key high-yield topics recurring across 5 and 8 marks:\n- Definition, History & Evolution of Machine Learning.\n- Supervised vs. Unsupervised Learning (Comparison, Algorithms & Examples).\n- Linear Algebra Hierarchy: Scalars, Vectors, Matrices, and Tensors.\n- Eigenvalues and Eigenvectors (Definition, Properties & Step-by-Step Calculation).\n- Matrix Operations & Properties (Addition, Multiplication, Transpose, Inverse & Invertibility)."
+            ],
+            [
+              "2. How should you structure your answers for 1, 2, 5, and 8-mark questions?",
+              "Maximize scoring by adopting exam-calibrated answer structures:\n- 1 Mark: Precise 1-sentence technical definition plus a crisp real-world example.\n- 2 Marks: Clear definition followed by 2 to 3 distinct bullet points and an application.\n- 5 Marks: Introduction, 5-7 numbered explanatory points, mathematical formula or diagram, and conclusion.\n- 8 Marks: Comprehensive structure: Introduction, formal definitions, detailed subheadings, comparison table or step-by-step math derivation, and conclusion."
+            ],
+            [
+              "3. What mathematical derivations and calculation steps must be practiced?",
+              "Examiners evaluate systematic step-by-step mathematical working:\n- Characteristic Equation: Setting up |A − λI| = 0 and writing the characteristic polynomial.\n- Eigenvalue Solutions: Finding roots λ₁ and λ₂.\n- Eigenvector Substitution: Setting up (A − λI)v = 0 for each eigenvalue and solving the linear equations.\n- Matrix Inversion: Computing determinant (ad − bc) and applying the adjoint matrix formula."
+            ],
+            [
+              "4. What conceptual distinctions are essential to master across Unit 1?",
+              "Ensure conceptual clarity on foundational dichotomies:\n- Supervised vs Unsupervised: Labelled data mapping y = f(x) vs unlabelled structure discovery.\n- AI vs ML: Broad field of intelligent agents vs specific data-driven pattern learning.\n- Matrix vs Tensor: 2D tabular array vs generalized N-dimensional container (e.g. RGB image as 3D tensor).\n- Feature vs Label: Independent input variable (X) vs dependent prediction target (Y)."
+            ]
+          ]
+        }
+      }
+    }
+  }
+};
+

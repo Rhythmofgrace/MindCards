@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
   <header class="toolbar">
@@ -16,9 +16,6 @@
     <span class="divider"></span>
     <button id="center" title="Center canvas" aria-label="Center canvas"></button>
     <button id="theme" title="Use dark mode" aria-label="Use dark mode" aria-pressed="false"></button>
-    <label class="subject-control">Subject
-      <select id="subject" aria-label="Content subject"></select>
-    </label>
     <label class="language-control">Language
       <select id="language" aria-label="Content language">
         <option value="english">English</option>
@@ -47,10 +44,12 @@
   <main id="viewport" aria-label="Flashcard mind map">
     <section id="menu" class="menu-screen" aria-label="Syllabus topics">
       <div id="topic-menu" class="menu-panel">
-        <button id="back-subjects" class="back-button" hidden>Back to subjects</button>
+        <button id="back-categories" class="back-button" hidden>Back</button>
+        <button id="back-subjects" class="back-button" hidden>Back</button>
         <button id="back-units" class="back-button" hidden>Back to units</button>
-        <h1 id="menu-title">Subjects</h1>
-        <div id="subject-list" class="topic-list"></div>
+        <h1 id="menu-title">MindCards</h1>
+        <div id="category-list" class="topic-list"></div>
+        <div id="subject-list" class="topic-list" hidden></div>
         <div id="unit-list" class="topic-list" hidden></div>
         <div id="topic-list" class="topic-list" hidden></div>
       </div>
@@ -90,8 +89,12 @@
   </main>
 
   <div class="zoom-controls"><button id="minus" aria-label="Zoom out"></button><output id="zoom">80%</output><button id="plus" aria-label="Zoom in"></button></div>
-  <script src="content.js?v=4"></script>
-  <script src="content_hing.js?v=1"></script>
-  <script src="app.js?v=9"></script>
+  <!-- Data Sets (Add or remove datasets easily here) -->
+  <script src="data/data_science.js"></script>
+  <script src="data/time_series.js"></script>
+  <script src="data/machine_learning_questions.js"></script>
+  <script src="data/hinglish_subjects.js"></script>
+  <script src="data/hinglish_ml_questions.js"></script>
+  <script src="app.js?v=13"></script>
 </body>
 </html>

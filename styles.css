@@ -41,8 +41,10 @@ html.dark .answer p{color:var(--answer-dark-color)}
 .toolbar>strong{cursor:pointer;user-select:none}
 .menu-screen{touch-action:none}
 .topic-list[hidden]{display:none}
-.toolbar.expanded{width:min(720px,calc(100vw - 24px));gap:5px;justify-content:flex-start}
-.toolbar.expanded>strong{position:static;transform:none}
+.toolbar.expanded{width:min(820px,calc(100vw - 24px));height:auto;max-height:calc(100vh - 28px);padding:10px 14px;flex-wrap:wrap;justify-content:center;gap:8px 12px;overflow-y:auto;overflow-x:hidden}
+.toolbar.expanded .style-control,.toolbar.expanded .color-control,.toolbar.expanded .language-control{display:flex!important}
+.toolbar.expanded>strong{position:static;transform:none;width:100%;text-align:center;line-height:28px}
+.toolbar.expanded .divider{display:none}
 .toolbar.expanded>:not(strong){max-width:180px;opacity:1;overflow:visible;pointer-events:auto}
 @media(max-width:600px){
   .toolbar>strong{display:block}
@@ -75,8 +77,10 @@ html.dark .answer p{color:var(--answer-dark-color)}
 .toolbar:not(.expanded):not(.study-mode)>strong{font-size:14px}
 .toolbar:not(.study-mode) .style-control,.toolbar:not(.study-mode) .color-control,.toolbar:not(.study-mode) ,.toolbar:not(.study-mode) .hint,.toolbar:not(.study-mode) .divider{display:none}
 .toolbar:not(.study-mode) #center,.toolbar:not(.study-mode) #theme{display:block}
-.toolbar.expanded{width:min(720px,calc(100vw - 24px));gap:5px;justify-content:flex-start}
-.toolbar.expanded>strong{position:static;transform:none}
+.toolbar.expanded{width:min(820px,calc(100vw - 24px));height:auto;max-height:calc(100vh - 28px);padding:10px 14px;flex-wrap:wrap;justify-content:center;gap:8px 12px;overflow-y:auto;overflow-x:hidden}
+.toolbar.expanded .style-control,.toolbar.expanded .color-control,.toolbar.expanded .language-control{display:flex!important}
+.toolbar.expanded>strong{position:static;transform:none;width:100%;text-align:center;line-height:28px}
+.toolbar.expanded .divider{display:none}
 @media(max-width:600px){
   .toolbar,.toolbar:hover,.toolbar:focus-within{top:14px;right:10px;left:auto;width:auto;min-width:0;height:40px;min-height:40px;padding:0 11px;transform:none;flex-wrap:nowrap}
   .toolbar:not(.expanded):not(.study-mode){width:auto;height:40px}
@@ -120,7 +124,7 @@ html.dark .answer p,html.dark .answer ul,html.dark .answer li{color:var(--answer
 /* Explicit toolbar toggle on every screen size. */
 .toolbar:not(.expanded),.toolbar:not(.expanded):hover,.toolbar:not(.expanded):focus-within{width:130px;min-width:130px;justify-content:center;gap:0}
 .toolbar:not(.expanded)>:not(strong),.toolbar:not(.expanded):hover>:not(strong),.toolbar:not(.expanded):focus-within>:not(strong){display:none}
-@media(min-width:701px){.toolbar.expanded{overflow-x:auto;overflow-y:hidden;scrollbar-width:none}.toolbar.expanded::-webkit-scrollbar{display:none}.toolbar.expanded.dragging-toolbar{cursor:grabbing;user-select:none}}
+@media(min-width:701px){.toolbar.expanded{overflow-y:auto;overflow-x:hidden}}
 
 /* Fix card count/content layout and expose horizontal text sizing. */
 .card{width:var(--card-width,340px)}
@@ -129,4 +133,26 @@ html.dark .answer p,html.dark .answer ul,html.dark .answer li{color:var(--answer
 #world.focused .card:not(.open){opacity:var(--focus-opacity)}
 .answer p,.answer li{font-family:var(--answer-font),Inter,Arial,sans-serif}
 .back-button{left:0;top:-60px;margin:0}
+.back-button[hidden]{display:none!important}
 @media(max-width:600px){.card{width:min(var(--card-width,290px),78vw)}.back-button{position:static;margin:0 0 25px}}
+
+/* Ensure [hidden] is strictly respected across all elements and IDs */
+[hidden],#topic-list[hidden],#unit-list[hidden],#subject-list[hidden],#category-list[hidden]{display:none!important}
+
+/* Vertically stacked subtopics */
+#topic-list:not([hidden]){display:flex;flex-direction:column;align-items:center;gap:12px;width:100%}
+#topic-list button{width:min(340px,90vw);text-align:center}
+
+/* Subtopic accordion inside answers */
+.answer-subtopic{margin:8px 0;border:1px solid #e1e0e7;border-radius:8px;padding:6px 10px;background:#fbfbfe;transition:background .2s ease;pointer-events:auto}
+.answer-subtopic summary{font-weight:600;font-size:calc(var(--answer-size) * 0.95);cursor:pointer!important;color:var(--ink);list-style:none;display:flex;align-items:center;gap:6px;user-select:none;pointer-events:auto!important;touch-action:auto!important}
+.answer-subtopic summary::-webkit-details-marker{display:none}
+.answer-subtopic summary:before{content:"▶";font-size:10px;color:var(--purple);display:inline-block;transition:transform .2s ease}
+.answer-subtopic[open] summary:before{transform:rotate(90deg)}
+.answer-subtopic[open]{background:#f5f4fb}
+.answer-subtopic p{margin:6px 0 4px 14px}
+.answer-subtopic ul{margin:6px 0 4px 14px}
+
+html.dark .answer-subtopic{border-color:#3a3a42;background:#25252b}
+html.dark .answer-subtopic[open]{background:#2e2e36}
+html.dark .answer-subtopic summary{color:var(--ink)}
