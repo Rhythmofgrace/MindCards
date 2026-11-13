@@ -3,285 +3,169 @@ window.studyData.hinglish = window.studyData.hinglish || {};
 window.studyData.hinglish.questions = window.studyData.hinglish.questions || {};
 window.studyData.hinglish.questions["Machine Learning"] = {
   "units": {
-    "1 Mark Questions": {
+    "Slot 1: ML Foundations & History": {
       "topics": {
-        "Q1 - Q4": {
+        "Foundations, Origins & Evolution": {
           "cards": [
             [
-              "Q1. Machine Learning ko define karein.",
-              "Machine Learning (ML) Artificial Intelligence (AI) ki ek aisi branch hai jo computers ko data se sikhne aur bina har task ke liye explicitly code kiye apni performance improve karne ki permission deti hai.\nExample: Gmail spam emails ko automatically ML ke through detect kar leta hai."
+              "1. Machine Learning kya hai aur iski importance kya hai?",
+              "Machine Learning (ML) Artificial Intelligence (AI) ki ek aisi branch hai jo computers ko data se sikhne aur bina explicitly program kiye apni performance improve karne ki capability deti hai.\nImportance:\nAutomation: Repetitive aur complex cognitive tasks ko automate karta hai.\nPrediction Accuracy: Naye data ke sath continuously parameters update karke accuracy badhata hai.\nDecision-Making: Badi datasets me patterns identify karke data-driven decisions leta hai.\nScalability: Human capacity se zyada massive data volumes ko instantly process karta hai.\nExample: Gmail spam emails ko automatically filter karta hai; shopping sites browsing history ke base par product recommend karti hain."
             ],
             [
-              "Q2. Machine Learning ka father kise kaha jata hai?",
-              "Arthur Samuel ko Machine Learning ka father mana jata hai. Unhone 1959 me 'Machine Learning' term introduce kiya tha."
+              "2. Machine Learning ka father kise kaha jata hai aur iska origin kaise hua?",
+              "Arthur Samuel ko Machine Learning ka father mana jata hai.\nOrigins & Milestones:\n1950: Alan Turing ne machine intelligence verify karne ke liye Turing Test propose kiya.\n1952: Arthur Samuel ne self-learning checkers program develop kiya jo khud se khel kar improve karta tha.\n1959: Arthur Samuel ne official taur par 'Machine Learning' term introduce aur coin kiya."
             ],
             [
-              "Q3. Artificial Intelligence kya hai?",
-              "Artificial Intelligence (AI) computer science ki ek branch hai jo machines ko human intelligence jaise tasks (jaise learning, reasoning aur decision-making) perform karne ke kabil banati hai."
+              "3. Artificial Intelligence (AI) aur Machine Learning (ML) me kya difference hai?",
+              "Artificial Intelligence (AI):\nComputer science ki broad field jo machines ko human intelligence, reasoning aur logic simulate karne ke kabil banati hai.\nIsme rule-based systems, heuristics aur learning techniques sabhi aate hain.\nExample: Rule-based medical diagnosis system ya chess solver engine.\nMachine Learning (ML):\nAI ka ek specific subset jo algorithms ko historical data se patterns sikhne par focus karta hai.\nYeh pre-written rules ki jagah data aur statistical models par depend karta hai.\nCore Shift: Traditional coding me Rules + Data → Answers hota hai, jabki ML me Data + Answers → Rules banti hain.\nExample: Email inbox data se train hua spam classifier."
             ],
             [
-              "Q4. Dataset kya hota hai?",
-              "Dataset related data ka ek collection hota hai jiska use Machine Learning model ko train, test aur evaluate karne ke liye kiya jata hai.\nExample: Students ke names, marks, ages aur attendance records ka table."
-            ]
-          ]
-        },
-        "Q5 - Q8": {
-          "cards": [
-            [
-              "Q5. Algorithm ko define karein.",
-              "Algorithm kisi specific problem ko solve karne ya particular task complete karne ke liye step-by-step instructions ka finite set hota hai."
-            ],
-            [
-              "Q6. Supervised Learning kya hai?",
-              "Supervised Learning ML ka ek type hai jisme model labelled data se sikhta hai, jahan input features ke sath unka correct output label bhi provided hota hai."
-            ],
-            [
-              "Q7. Unsupervised Learning kya hai?",
-              "Unsupervised Learning ML ka ek type hai jisme model unlabelled data se patterns aur hidden structures discover karta hai, jahan koi predefined target output nahi hota."
-            ],
-            [
-              "Q8. Machine Learning applications ke do examples dein.",
-              "Email spam detection.\nFace recognition system."
-            ]
-          ]
-        },
-        "Q9 - Q12": {
-          "cards": [
-            [
-              "Q9. Machine Learning me Feature kya hota hai?",
-              "Feature data ki ek individual measurable property ya characteristic hoti hai jise ML model me input variable ke roop me pass kiya jata hai.\nExample: Kisi person ki age, height aur weight uske features hain."
-            ],
-            [
-              "Q10. Machine Learning me Label kya hota hai?",
-              "Label woh correct output ya target value hoti hai jise supervised learning me model predict karna sikhta hai.\nExample: Email classification me 'Spam' ya 'Not Spam' label hota hai."
-            ],
-            [
-              "Q11. Matrix ko define karein.",
-              "Matrix numbers ya elements ka rows aur columns me rectangular arrangement hota hai.\nExample: A = [[1, 2], [3, 4]]."
-            ],
-            [
-              "Q12. Tensor kya hota hai?",
-              "Tensor ek multidimensional mathematical data structure hai jo multiple dimensions me numerical data represent kar sakta hai. Scalars (0D), vectors (1D), aur matrices (2D) sabhi tensors ke examples hain."
-            ]
-          ]
-        },
-        "Q13 - Q16": {
-          "cards": [
-            [
-              "Q13. Vector kya hota hai?",
-              "Vector numbers ka ek ordered collection hota hai jo single row ya single column me arranged hota hai.\nExample: V = [2, 4, 6]ᵀ."
-            ],
-            [
-              "Q14. Eigenvalue ko define karein.",
-              "Eigenvalue ek scalar value hoti hai jo batati hai ki matrix transformation ke doran eigenvector kitna stretch ya compress (scale) hua hai."
-            ],
-            [
-              "Q15. Eigenvector ko define karein.",
-              "Eigenvector ek non-zero vector hota hai jiski direction matrix transformation apply karne par change nahi hoti, sirf uska magnitude change ho sakta hai."
-            ],
-            [
-              "Q16. Scalar kya hota hai?",
-              "Scalar ek single numerical value hoti hai jo kisi quantity ke magnitude ko represent karti hai.\nExample: 5, 10, 20 aur 3.5."
-            ]
-          ]
-        },
-        "Q17 - Q20": {
-          "cards": [
-            [
-              "Q17. Linear Algebra kya hai?",
-              "Linear Algebra mathematics ki ek aisi branch hai jo vectors, matrices, linear equations aur unke mathematical operations ko deal karti hai."
-            ],
-            [
-              "Q18. Square matrix kya hoti hai?",
-              "Square matrix ek aisi matrix hoti hai jisme rows aur columns ki count exact barabar (equal) hoti hai.\nExample: [[1, 2], [3, 4]] jisme 2 rows aur 2 columns hain."
-            ],
-            [
-              "Q19. Matrix ka transpose kya hota hai?",
-              "Matrix ka transpose uske rows aur columns ko aapas me interchange karke calculate kiya jata hai. Isko Aᵀ se represent karte hain."
-            ],
-            [
-              "Q20. Machine Learning ke do types ke naam batayein.",
-              "Supervised Learning.\nUnsupervised Learning."
+              "4. Machine Learning ki historical evolution explain karein.",
+              "1950s (Early Development): Turing Test (1950) aur Arthur Samuel ka checkers program (1952) aur ML term (1959).\n1980s (Connectionism): Backpropagation algorithm ne multilayer artificial neural networks ko revive kiya.\n1990s (Statistical Learning): SVMs, Decision Trees aur Random Forests dominant ban gaye.\n2000s (Big Data Era): Internet expansion aur computing power ne large-scale practical ML possible banaya.\n2010s–Present (Deep Learning & GenAI): GPUs aur Transformers ne computer vision, speech aur Large Language Models (LLMs) me breakthroughs create kiye."
             ]
           ]
         }
       }
     },
-    "2 Mark Questions": {
+    "Slot 2: Core Elements & Lifecycle Pipeline": {
       "topics": {
-        "Q1 - Q4": {
+        "Basic Concepts & Machine Learning Pipeline": {
           "cards": [
             [
-              "Q1. Machine Learning ko define karein aur iski importance explain karein.",
-              "Machine Learning AI ki ek aisi branch hai jo computers ko historical data se sikhne aur bina har situation ke liye explicitly code kiye predictions ya decisions lene deti hai.\nImportance:\nAutomation: Yeh repetitive tasks ko automate karta hai.\nAccuracy: Prediction accuracy ko improve karta hai.\nDecision-making: Data ke base par better aur faster decisions leta hai.\nTime-saving: Human effort reduce karta hai aur time bachta hai.\nExample: E-commerce sites user preferences ke base par products recommend karti hain."
+              "1. Machine Learning ke foundational concepts (Data, Features, Labels, Model) kya hain?",
+              "Data: Model ko train aur test karne ke liye use hone wali historical information aur factual observations.\nFeatures: Data ke measurable input variables (X) jo model ko input ke roop me diye jate hain (jaise age, study hours, attendance).\nLabels: Supervised learning me woh correct target ground-truth output (Y) jise model predict karna sikhta hai (jaise Spam/Not Spam, Pass/Fail).\nModel: Algorithm dwara data se patterns sikhne ke baad bani trained mathematical representation."
             ],
             [
-              "Q2. Machine Learning ki koi do applications likhein.",
-              "Healthcare: ML doctors ko diseases detect karne aur medical reports analyze karne me help karta hai.\nBanking: Yeh fraudulent transactions ko detect karta hai aur unusual financial activities ko flag karta hai.\nOther applications: Self-driving cars, face recognition, weather forecasting, aur recommendation systems."
+              "2. Machine Learning lifecycle / pipeline ke key stages kya hain?",
+              "1. Data Collection: Databases, APIs ya sensors se relevant historical data gather karna.\n2. Data Preprocessing: Missing values handle karna, noise clean karna aur features scale karna.\n3. Feature Selection & Engineering: Sabse predictive variables select karna taaki dimensionality optimize ho sake.\n4. Model Selection & Training: Suitable algorithm select karke training data par internal weights learn karwana.\n5. Model Evaluation: Unseen test data par performance measure karna (Accuracy, Precision, Recall, RMSE).\n6. Deployment & Prediction: Model ko production server par deploy karke real-time predictions generate karna."
             ],
             [
-              "Q3. Artificial Intelligence aur Machine Learning me difference batayein.",
-              "Artificial Intelligence (AI):\nAI computer science ki broad field hai.\nIska main focus machines ko intelligent banana hai.\nYeh rules, logic, aur learning techniques teeno use kar sakta hai.\nExample: Ek rule-based chess expert system.\nMachine Learning (ML):\nML AI ka ek specific subset hai.\nIska main focus machines ko data se sikhne me capable banana hai.\nYeh primary roop se data aur learning algorithms par depend karta hai.\nExample: Email spam filter model."
+              "3. Machine Learning me Algorithm kya hota hai aur training kaise work karti hai?",
+              "Algorithm: Step-by-step mathematical optimization procedure jo data me patterns discover karke parameters adjust karta hai.\nTraining Process: Model training samples par predictions karta hai, actual labels ke sath error (loss) calculate karta hai, aur optimization techniques (e.g. gradient descent) se weights update karta hai.\nTesting / Validation: Trained model ko unseen data par evaluate kiya jata hai taaki verify ho sake ki model properly generalize kar raha hai aur overfit nahi hua."
             ],
             [
-              "Q4. Machine Learning ki history briefly explain karein.",
-              "Machine Learning ka development 1950s me start hua tha:\n1950: Alan Turing ne machine intelligence test karne ke liye Turing Test propose kiya.\n1952: Arthur Samuel ne checkers game sikhne wala computer program develop kiya.\n1959: Arthur Samuel ne 'Machine Learning' term coin kiya.\n1980s: Neural networks aur learning techniques popular hui.\n2000s onwards: Big Data, GPUs aur advanced algorithms ki wajah se ML bohot tezi se develop hua.\nToday: ML healthcare, banking, education aur daily life me widely use ho raha hai."
-            ]
-          ]
-        },
-        "Q5 - Q8": {
-          "cards": [
-            [
-              "Q5. Machine Learning ke do advantages likhein.",
-              "Automation: Machine Learning tasks ko automate karta hai aur manual human effort ko drastically reduce karta hai.\nImproved predictions: Yeh large volumes of data ko analyze karke high-accuracy predictions generate karta hai.\nOther advantages: Fast decision-making, continuous model improvement, aur complex multi-variable problems solve karna."
-            ],
-            [
-              "Q6. Supervised aur Unsupervised learning me differentiate karein.",
-              "Supervised Learning:\nLabelled data use karta hai.\nTarget outputs training ke time provided hote hain.\nPrediction aur classification tasks ke liye use hota hai.\nExample: Email spam detection.\nUnsupervised Learning:\nUnlabelled data use karta hai.\nTarget outputs provide nahi kiye jate.\nHidden patterns, clusters aur relationships find karne ke liye use hota hai.\nExample: Customer segmentation."
-            ],
-            [
-              "Q7. Machine Learning ke key elements kya hain?",
-              "Data: Model ko train karne ke liye historical information.\nFeatures: Data ke input variables jinhe model use karta hai.\nAlgorithm: Data se patterns sikhne ka mathematical method.\nModel: Trained mathematical structure jo new data par predictions karta hai.\nTraining: Data ke through model ke weights ko adjust karne ka process.\nEvaluation: Test data par model ki performance aur accuracy measure karna."
-            ],
-            [
-              "Q8. Machine Learning ka future scope explain karein.",
-              "Machine Learning ka future bohot bright hai kyunki har industry ise adopt kar rahi hai:\nSelf-driving autonomous vehicles.\nAdvanced healthcare me early disease detection aur personalized medicine.\nSmart robotics aur industrial automation.\nBanking me instant fraud detection aur risk analytics.\nAdaptive personalized education systems jo student pace par chalte hain."
-            ]
-          ]
-        },
-        "Q9 - Q12": {
-          "cards": [
-            [
-              "Q9. Scalar, Vector aur Matrix ko examples ke sath define karein.",
-              "Scalar: Single numerical value (0-dimensional). Example: 5.\nVector: 1-dimensional array of numbers jo row ya column me hota hai. Example: V = [2, 4, 6]ᵀ.\nMatrix: Rows aur columns me arranged 2-dimensional numbers ka table. Example: A = [[1, 2], [3, 4]].\nYeh mathematical structures ML me data ko represent aur process karne ke core blocks hain."
-            ],
-            [
-              "Q10. Tensor kya hai? Example dein.",
-              "Tensor ek multidimensional mathematical structure hai jo numerical data store aur process karne ke liye use hota hai:\nScalar: 5 (0D tensor).\nVector: [1, 2, 3] (1D tensor).\nMatrix: Numbers ka table (2D tensor).\nHigher-dimensional tensor: Matrices ka collection (jaise color images me 3D tensor: Height × Width × Channels).\nApplication: Deep Learning frameworks me complex images aur video data tensors ke roop me process hote hain."
-            ],
-            [
-              "Q11. Matrices ki koi do properties likhein.",
-              "Commutative property of addition: A + B = B + A.\nAssociative property of addition: (A + B) + C = A + (B + C).\nYeh properties tab valid hoti hain jab dono matrices ke dimensions bilkul same (compatible) hon."
-            ],
-            [
-              "Q12. Eigenvalues aur Eigenvectors kya hote hain?",
-              "Eigenvalue: Ek scalar (λ) jo matrix transformation ke doran eigenvector ke scaling factor ko represent karta hai.\nEigenvector: Ek non-zero vector (v) jiski direction matrix transformation ke baad bhi unchanged rehti hai.\nEquation: Av = λv (jahan A square matrix, v eigenvector aur λ eigenvalue hai).\nML Application: Principal Component Analysis (PCA) aur dimensionality reduction me critical use hota hai."
-            ]
-          ]
-        },
-        "Q13 - Q15": {
-          "cards": [
-            [
-              "Q13. Matrix multiplication kya hota hai?",
-              "Matrix multiplication ek aisa operation hai jisme do matrices ko multiply karke ek new matrix banti hai. Isme pehli matrix ke columns doosri matrix ke rows ke barabar hone zaroori hain.\nExample: [1, 2] × [3, 4]ᵀ = (1 × 3) + (2 × 4) = 3 + 8 = 11."
-            ],
-            [
-              "Q14. Machine Learning me Linear Algebra ka role explain karein.",
-              "Linear Algebra data ko mathematically represent aur process karne me foundational role play karta hai:\nVectors single data points ya sample features ko represent karte hain.\nMatrices entire datasets ko rows aur columns me compactly store karti hain.\nMatrix multiplication neural networks aur optimization me multiply operations speedup karta hai.\nEigenvalues aur eigenvectors dimensionality reduction (PCA) me use hote hain."
-            ],
-            [
-              "Q15. Matrix ka transpose kya hai? Example dein.",
-              "Matrix ka transpose uske rows ko columns me aur columns ko rows me convert karke obtain kiya jata hai. Isko Aᵀ se denote karte hain.\nExample: Agar A = [[1, 2], [3, 4]], toh Aᵀ = [[1, 3], [2, 4]]."
+              "4. Modern technology me Machine Learning ki industrial importance kya hai?",
+              "Automation: Manual rule-writing ko eliminate karke complex visual aur language tasks automate karta hai.\nPattern Recognition: High-dimensional data me subtle aur non-linear relationships dhundta hai jo insaan easily nahi dekh sakte.\nSpeed & Scalability: Millions of data transactions ko fraction of a second me process karke predictions deta hai.\nPersonalization: Education, streaming aur e-commerce me user habits ke according customized experience provide karta hai."
             ]
           ]
         }
       }
     },
-    "5 Mark Questions": {
+    "Slot 3: Supervised vs Unsupervised Learning": {
       "topics": {
-        "Q1 - Q4": {
+        "Learning Paradigms, Algorithms & Applications": {
           "cards": [
             [
-              "Q1. Machine Learning ki definition, history aur evolution explain karein.",
-              "Definition: Machine Learning Artificial Intelligence ki ek branch hai jo computers ko data se patterns sikhne aur explicitly program kiye bina predictions karne ki capability deti hai.\nHistory and evolution:\n1950s (Early Development): Alan Turing ne machine intelligence ka concept diya. Arthur Samuel ne checkers program banaya aur 1959 me Machine Learning term diya.\n1980s (Neural Networks): Backpropagation ke aane se neural networks aur learning models research me popular hue.\n1990s (Statistical ML): Decision Trees, SVMs aur statistical learning methods dominate karne lage.\n2000s (Big Data Era): Internet aur high-speed computers ne massive data processing practical banaya.\n2010s onwards (Modern Deep Learning): Deep neural networks ne computer vision, speech aur NLP ko completely revolutionize kar diya."
+              "1. Supervised Learning kya hai? Iske types, algorithms aur applications explain karein.",
+              "Supervised Learning ek aisi learning approach hai jisme model labelled data par train hota hai jahan input features (X) ke sath unka correct target label (Y) provided hota hai.\nTypes:\nClassification: Discrete categories predict karta hai (e.g. Spam/Not Spam, Pass/Fail, Healthy/Diseased). Algorithms: Logistic Regression, Decision Tree, Naïve Bayes, SVM, KNN.\nRegression: Continuous numerical values predict karta hai (e.g. House price, temperature, salary). Algorithms: Linear Regression, Multiple Linear Regression, Polynomial Regression.\nApplications: Email spam filtering, medical disease prediction, credit-risk scoring, aur student performance prediction."
             ],
             [
-              "Q2. Machine Learning ke basic concepts aur key elements discuss karein.",
-              "Machine Learning is fundamental principle par work karta hai ki computers historical data se patterns identify karte hain aur future data predict karte hain.\nBasic concepts:\nData: Model train karne ke liye raw factual observations.\nFeatures: Data ke input attributes (e.g. study hours, attendance).\nLabels: Supervised learning me expected ground-truth target outputs.\nAlgorithm: Patterns sikhne ka mathematical optimization method.\nModel: Trained system jo new input par inference deta hai.\nKey elements process:\nData collection aur cleaning.\nFeature selection aur engineering.\nModel selection aur parameter training.\nModel evaluation test data par metrics ke sath."
+              "2. Unsupervised Learning kya hai? Iske types, algorithms aur applications explain karein.",
+              "Unsupervised Learning me model unlabelled data (X) par train hota hai jahan koi target label (Y) ya external feedback nahi hota.\nTypes:\nClustering: Similar data points ko similarity ke base par groups me divide karta hai. Algorithms: K-Means, Hierarchical Clustering, DBSCAN.\nDimensionality Reduction: Maximum variance preserve karte hue high-dimensional features ko compress karta hai. Algorithms: PCA, t-SNE.\nAssociation Rule Learning: Items ke beech hidden co-occurrence relationships discover karta hai (e.g. Apriori).\nApplications: Customer market segmentation, fraud anomaly detection, document grouping, aur genomic sequence analysis."
             ],
             [
-              "Q3. Real-world scenarios me Machine Learning ki different applications explain karein.",
-              "Healthcare: Disease diagnosis, cancer detection medical scans se, aur drug discovery me.\nBanking and Finance: Real-time credit card fraud detection aur loan credit risk analysis.\nEducation: Students ki performance ke hisab se customized adaptive learning pathways.\nE-commerce: Browsing history ke base par personal product recommendations.\nTransportation: Autonomous self-driving vehicles, route optimization aur traffic congestion forecasting.\nEntertainment: Netflix aur Spotify par movies aur songs ka personalization engine."
-            ],
-            [
-              "Q4. Supervised aur Unsupervised learning me suitable examples ke sath differentiate karein.",
-              "Supervised Learning: Model labelled pairs (X, Y) se mapping function Y = f(X) sikhta hai. Target outputs explicitly diye jate hain. Tasks: Classification aur Regression. Examples: Spam detection, house price prediction. Algorithms: Linear Regression, Decision Trees, SVM.\nUnsupervised Learning: Model unlabelled data (X) se intrinsic clusters aur hidden distributions discover karta hai. Target output provide nahi hota. Tasks: Clustering aur Dimensionality Reduction. Examples: Customer segmentation, anomaly detection. Algorithms: K-Means, PCA.\nMain differences:\nData: Labelled vs Unlabelled.\nTarget Output: Known vs Unknown.\nGoal: Prediction vs Hidden Pattern Discovery."
-            ]
-          ]
-        },
-        "Q5 - Q8": {
-          "cards": [
-            [
-              "Q5. Machine Learning ka future scope aur importance explain karein.",
-              "Importance:\nAutomation manual repetitive workflows ko eliminate karta hai.\nLarge big data se superhuman insights extract karta hai.\nReal-time decision making aur accurate forecasting provide karta hai.\nFuture scope:\nHealthcare: Early stage oncology detection aur personalized genomic medicine.\nRobotics: Hazardous environments me intelligent autonomous robotic agents.\nTransportation: Fully driverless commercial logistics aur AI smart traffic management.\nAgriculture: Satellite imagery se crop-disease prediction aur automated soil analytics.\nEducation: Intelligent personalized AI tutoring har student ke pace ke mutabiq."
-            ],
-            [
-              "Q6. Linear Algebra ke different data structures: Scalar, Vector, Matrix aur Tensor explain karein.",
-              "Linear Algebra ML ka core mathematical infrastructure provide karta hai:\nScalar: Single numeric entity (0-dimensional tensor). Example: s = 5. Hyperparameters jaise learning rate (α) represent karta hai.\nVector: 1D ordered array of numbers (1-dimensional tensor). Example: v = [2, 4, 6]ᵀ. Ek individual data instance ke features represent karta hai.\nMatrix: Rows aur columns ka 2D grid (2-dimensional tensor). Example: A = [[1, 2], [3, 4]]. Multiple samples ka design dataset store karta hai.\nTensor: Arbitrary N-dimensional array. Matrix 2D tensor hai, jabki color image 3D tensor (H × W × Channels) hoti hai. Deep Learning models tensor computations par run hote hain."
-            ],
-            [
-              "Q7. Tensor operations ko suitable examples ke sath explain karein.",
-              "Tensor operations multidimensional arrays ko manipulate karne ke liye use hote hain:\nLet A = [[1, 2], [3, 4]] aur B = [[5, 6], [7, 8]].\nAddition: A + B = [[6, 8], [10, 12]] (corresponding elements add hote hain, shapes identical honi chahiye).\nSubtraction: A − B = [[−4, −4], [−4, −4]].\nElement-wise (Hadamard) Multiplication: A ⊙ B = [[5, 12], [21, 32]].\nMatrix Multiplication: Dot product AB = [[19, 22], [43, 50]].\nTranspose: Aᵀ = [[1, 3], [2, 4]].\nReshaping: 1D array [1, 2, 3, 4] ko 2 × 2 matrix me shape change karna bina elements ko modify kiye."
-            ],
-            [
-              "Q8. Matrices ki important properties describe karein.",
-              "Matrix algebra ke foundational rules:\nCommutative Addition: A + B = B + A.\nAssociative Addition: (A + B) + C = A + (B + C).\nAssociative Multiplication: (AB)C = A(BC).\nDistributive Property: A(B + C) = AB + AC.\nIdentity Property: AI = IA = A (jahan I identity matrix hai).\nTranspose Properties: (A + B)ᵀ = Aᵀ + Bᵀ, (Aᵀ)ᵀ = A, aur (AB)ᵀ = BᵀAᵀ.\nNon-Commutative Multiplication: General case me AB ≠ BA hota hai, order matter karta hai."
-            ]
-          ]
-        },
-        "Q9 - Q10": {
-          "cards": [
-            [
-              "Q9. Eigenvalues aur Eigenvectors ko suitable example ke sath explain karein.",
-              "Eigenvectors linear transformations me invariant direction rakhte hain, aur unke scaling magnitude ko eigenvalues kehte hain:\nEquation: Av = λv ya (A − λI)v = 0.\nExample: A = [[2, 0], [0, 3]].\nStep 1 (Eigenvalues): |A − λI| = 0 solve karein:\n|(2 − λ)  0; 0  (3 − λ)| = 0 ⇒ (2 − λ)(3 − λ) = 0 ⇒ λ₁ = 2, λ₂ = 3.\nStep 2 (Eigenvectors): For λ = 2, (A − 2I)v = [[0, 0], [0, 1]][x, y]ᵀ = [0, 0]ᵀ ⇒ y = 0, choose x = 1 ⇒ v₁ = [1, 0]ᵀ.\nFor λ = 3, (A − 3I)v = [[−1, 0], [0, 0]][x, y]ᵀ = [0, 0]ᵀ ⇒ x = 0, choose y = 1 ⇒ v₂ = [0, 1]ᵀ.\nApplications: Principal Component Analysis (PCA), dimensionality reduction aur feature projection."
-            ],
-            [
-              "Q10. Machine Learning me matrix operations ki importance discuss karein.",
-              "Matrix operations ML algorithms ka core computational backbone form karte hain:\nData representation: Large multi-feature datasets N × D dimensional matrices me store hote hain.\nLinear Regression: Normal equation w = (XᵀX)⁻¹Xᵀy se optimal weights directly analytically calculate hote hain.\nNeural Networks: Har dense layer ka forward pass vectorized matrix multiplication a = σ(Wx + b) se execute hota hai.\nCovariance & PCA: Feature variance aur correlation capture karne ke liye covariance matrices calculate kiye jate hain.\nGPU hardware acceleration: Matrix math GPUs ke tensor cores par massively parallel scale par execute hota hai."
+              "3. Supervised vs Unsupervised Learning ka comprehensive comparison.",
+              "Training Data: Labelled pairs (X, Y) with ground truth vs Unlabelled data (X only).\nSupervision: External error feedback signal hota hai vs Autonomous pattern discovery bina feedback ke.\nPrimary Goal: Mapping function predict karna (Y = f(X)) vs Data ke intrinsic structure aur clusters discover karna.\nCore Tasks: Classification aur Regression vs Clustering, Association Rules aur Dimensionality Reduction.\nAlgorithms: Linear/Logistic Regression, Decision Trees, SVM vs K-Means, Hierarchical Clustering, PCA."
             ]
           ]
         }
       }
     },
-    "8 Mark Questions": {
+    "Slot 4: Linear Algebra & Dimensional Data Structures": {
       "topics": {
-        "Q1 - Q4": {
+        "Linear Algebra Hierarchy & Data Representation": {
           "cards": [
             [
-              "Q1. Machine Learning define karein. Iski history, evolution, future scope aur real-world applications detail me explain karein.",
-              "Introduction: ML AI ki ek field hai jo systems ko empirical data se sikhne aur adapt karne ki capability deti hai bina manual hard-coded rules ke.\nHistory & Milestones:\n1950: Alan Turing ne Turing Test propose kiya machine intelligence verify karne ke liye.\n1952-1959: Arthur Samuel ne checkers learning model banaya aur ML term coin kiya.\n1980s: Backpropagation discovery se multilayer neural networks popular hue.\n1990s: Support Vector Machines (SVM), Random Forests aur statistical learning develop hue.\n2010s-Present: Big Data, GPUs aur Deep Learning ne vision, NLP aur Generative AI create kiya.\nReal-world applications:\nHealthcare: Cancerous tumor detection aur genomic drug discovery.\nBanking: Real-time fraud detection aur automated algorithmic trading.\nAutonomous Transport: Self-driving cars, lane detection aur obstacle avoidance.\nE-commerce: User purchase history par based personalized recommendation engines.\nFuture scope: Fully autonomous industrial robots, precision AI oncology, aur smart autonomous electrical grids."
+              "1. Linear Algebra kya hai aur Machine Learning me iska role kya hai?",
+              "Linear Algebra mathematics ki branch hai jo vectors, matrices, linear transformations aur spaces ko deal karti hai.\nRole in Machine Learning:\nData Representation: N samples aur D features ka tabular dataset N × D design matrix me compactly store hota hai.\nVectorized Computation: Loops hatakar parallel GPU hardware par matrix operations fast execute karta hai.\nDimensionality Reduction: PCA aur SVD jaise techniques high-dimensional data ko principal axes par project karte hain.\nOptimization: Linear regression ka analytical solution (Normal Equation) pure linear algebra par depend karta hai."
             ],
             [
-              "Q2. Machine Learning ke basic concepts aur key elements explain karein. Modern technology me iski importance discuss karein.",
-              "Core Concepts:\nData: ML system ka raw fuel aur historical experience.\nFeatures: Data ke quantifiable input parameters (X).\nLabels: Supervised setting me correct target ground-truth outcomes (Y).\nModel: Hypothesis function jo inputs ko predicted targets me map karta hai.\nPipeline Key Elements:\n1. Data collection & cleaning: Missing values aur noisy records remove karna.\n2. Feature engineering: Most discriminative signals ko select karna.\n3. Training: Cost loss function minimize karke internal parameters tune karna.\n4. Evaluation & Validation: Unseen validation/test sets par accuracy aur precision measure karna.\nImportance in Technology:\nCognitive tasks automate karta hai jo classical code me impossible the.\nUnstructured data (images, voice, text) se actionable patterns nikalta hai.\nReal-time hyper-personalization har user ke liye dynamically enable karta hai."
+              "2. Dimensional hierarchy explain karein: Scalar, Vector, Matrix aur Tensor.",
+              "Scalar (Rank-0 Tensor): Single numerical value jo sirf magnitude represent karti hai (e.g. s = 5, learning rate α = 0.01).\nVector (Rank-1 Tensor): 1-dimensional array of numbers jo kisi single sample ke features represent karta hai (e.g. V = [2, 4, 6]ᵀ).\nMatrix (Rank-2 Tensor): Numbers ka 2-dimensional rows aur columns table jo entire dataset represent karta hai (e.g. A = [[1, 2], [3, 4]]).\nTensor (Rank-3+): Multidimensional data array jo 2D se aage extend hota hai. Scalars 0D, vectors 1D, matrices 2D tensors hain; color images 3D tensors (H × W × Channels) hain aur video batches 5D tensors hote hain."
             ],
             [
-              "Q3. Supervised aur Unsupervised learning detail me explain karein. Differentiate karein suitable examples aur applications ke sath.",
-              "Supervised Learning:\nModel input features X aur ground-truth output labels Y ke pairs (X, Y) par train hota hai.\nObjective: Mapping function Y = f(X) learn karna taaki new input par correct label predict ho sake.\nTypes:\nClassification: Discrete categories predict karna (e.g. Spam/Not Spam, Pass/Fail). Algorithms: Logistic Regression, Decision Tree, KNN, SVM.\nRegression: Continuous numerical outputs predict karna (e.g. House price, Salary). Algorithms: Linear Regression, Ridge, Polynomial Regression.\nApplications: Medical diagnostics, stock forecasting, spam filtering.\nUnsupervised Learning:\nModel sirf unlabelled inputs X par train hota hai, koi target output Y nahi hota.\nObjective: Data ke intrinsic structure, clusters, ya density distribution discover karna.\nTypes:\nClustering: Similar data points ko group karna (e.g. K-Means, DBSCAN).\nDimensionality Reduction: Redundant features compress karna (e.g. PCA, t-SNE).\nApplications: Customer segmentation, anomaly detection, genomic sequence grouping.\nKey Differences:\nData: Labelled vs Unlabelled.\nSupervision: External ground truth signal vs Autonomous pattern discovery."
-            ],
-            [
-              "Q4. Machine Learning ke mathematical foundations explain karein: Linear Algebra, Scalars, Vectors, Matrices aur Tensors ke context me.",
-              "Linear Algebra Machine Learning ka mathematical foundation provide karta hai:\nScalars (0D): Pure magnitude; learning rate (α), regularization lambda (λ), aur scalar loss values represent karte hain.\nVectors (1D): Single sample instance ka multi-feature array; dot product wᵀx linear models aur cosine similarity calculate karta hai.\nMatrices (2D): N samples × D features ka design dataset; linear transformations feature space ko rotate aur project karti hain.\nTensors (3D+): Generalized multidimensional array containers; color image batches (Batch × Channels × Height × Width) represent karne ke liye standard structure.\nFoundational Operations:\nMatrix Inversion: Linear Regression ke analytical solution w = (XᵀX)⁻¹Xᵀy me use hoti hai.\nEigendecomposition & SVD: High-dimensional data ko low-dimensional principal variance directions par project karta hai (PCA).\nNorms (L1, L2): Overfitting prevent karne ke liye regularization penalty formulate karti hain."
+              "3. Square Matrix kya hoti hai aur ML me iski importance kya hai?",
+              "Square Matrix: Ek aisi matrix jisme rows aur columns ki count exact barabar (m = n) hoti hai.\nExample: A = [[1, 2], [3, 4]] ek 2 × 2 square matrix hai.\nImportance in ML:\nDeterminants (|A|) aur matrix inverse (A⁻¹) calculate karne ke liye zaroori hoti hai.\nEigenvalues aur eigenvectors (Av = λv) calculate karne ke liye square matrix must hai.\nData covariance matrices jo PCA me use hoti hain hamesha D × D symmetric square matrices hoti hain."
             ]
           ]
-        },
-        "Q5 - Q8": {
+        }
+      }
+    },
+    "Slot 5: Tensor & Matrix Operations": {
+      "topics": {
+        "Mathematical Computations & Worked Examples": {
           "cards": [
             [
-              "Q5. Tensors kya hain? Different tensor operations suitable examples ke sath explain karein.",
-              "Tensor Definition: Multidimensional array data structure jo Deep Learning aur scientific computing me numerical values ko organize karta hai.\nRank Hierarchy:\nRank 0: Scalar (single value e.g. 5).\nRank 1: Vector (1D list e.g. [1, 2, 3]).\nRank 2: Matrix (2D table e.g. [[1, 2], [3, 4]]).\nRank 3+: Higher-order tensors (e.g. RGB color image Height × Width × 3).\nTensor Operations:\nElement-wise operations: A + B, A − B, aur element-wise product A ⊙ B jo identical shape par execute hote hain.\nMatrix Multiplication (Contraction): Rows aur columns ka dot product: [[1, 2], [3, 4]] × [[5, 6], [7, 8]] = [[19, 22], [43, 50]].\nTranspose & Permute: Dimension axes ko swap karna (e.g. PyTorch channels-first se TensorFlow channels-last me convert karna).\nReshaping: Data memory ko maintain karke tensor structure change karna (e.g. flatten operation).\nRole in Deep Learning: Neural network layers, weights, biases aur gradient backpropagation tensors ke roop me execute hote hain."
+              "1. Tensor Operations examples ke sath explain karein (Addition, Subtraction, Hadamard, Reshaping).",
+              "Let A = [[1, 2], [3, 4]] aur B = [[5, 6], [7, 8]].\nAddition: A + B = [[1+5, 2+6], [3+7, 4+8]] = [[6, 8], [10, 12]] (shapes match hone chahiye).\nSubtraction: A − B = [[1−5, 2−6], [3−7, 4−8]] = [[−4, −4], [−4, −4]].\nElement-wise (Hadamard) Multiplication: A ⊙ B = [[1×5, 2×6], [3×7, 4×8]] = [[5, 12], [21, 32]].\nTranspose: Aᵀ = [[1, 3], [2, 4]] (rows aur columns interchange ho jate hain).\nReshaping: Memory data ko preserve karte hue tensor structure change karna (e.g. [1, 2, 3, 4] ko 2 × 2 matrix me reshape karna).\nDeep Learning Role: Convolution filters, attention weights aur backpropagation gradient calculations me core primitive hai."
             ],
             [
-              "Q6. Matrices ki different properties explain karein aur Machine Learning me unki importance discuss karein.",
-              "Mathematical Properties:\nCommutative Addition: A + B = B + A (same dimensions).\nAssociative Laws: (A + B) + C = A + (B + C) aur (AB)C = A(BC).\nDistributive Law: A(B + C) = AB + AC.\nIdentity Matrix: AI = IA = A (diagonal par 1, baaki sab 0).\nTranspose Rules: (A + B)ᵀ = Aᵀ + Bᵀ, (AB)ᵀ = BᵀAᵀ, aur (Aᵀ)ᵀ = A.\nNon-Commutative: General setting me AB ≠ BA hota hai.\nInvertibility: A square matrix invertible hoti hai agar uska determinant det(A) ≠ 0 ho (AA⁻¹ = I).\nImportance in ML:\nVectorized computation: Loops ke bina high-speed multi-sample operations.\nOptimization closed-form: Ordinary Least Squares (OLS) closed-form matrix calculations se solve hota hai.\nDimensionality Reduction: Covariance matrix ke eigen-decomposition se data variance optimize hoti hai."
+              "2. Matrix Multiplication dimensional rules aur examples ke sath explain karein.",
+              "Dimensional Rule: Pehli matrix ke columns doosri matrix ke rows ke barabar hone chahiye (agar A is m × k aur B is k × n, toh product AB is m × n).\nCalculation: A ke har row ko B ke har column se multiply karke sum calculate kiya jata hai.\nWorked Example: Let A = [[1, 2], [3, 4]] aur B = [[5, 6], [7, 8]].\nAB = [[(1×5 + 2×7), (1×6 + 2×8)], [(3×5 + 4×7), (3×6 + 4×8)]] = [[19, 22], [43, 50]].\nNeural Network Application: Dense layers ka forward pass activation formula Z = WX + b matrix multiplication se evaluate hota hai."
             ],
             [
-              "Q7. Eigenvalues aur Eigenvectors define karein. Matrix ke eigenvalues aur eigenvectors kaise calculate karte hain, example ke sath explain karein.",
-              "Definition: Square matrix A ke liye non-zero vector v eigenvector hota hai agar Av = λv ho, jahan scalar λ eigenvalue hai.\nCalculation Steps:\nStep 1 (Characteristic Equation): Det |A − λI| = 0 solve karke characteristic polynomial ke roots (eigenvalues) find karein.\nStep 2 (Eigenvectors): Har eigenvalue λ ke liye linear system (A − λI)v = 0 solve karke non-zero vector v find karein.\nWorked Example: Let A = [[2, 0], [0, 3]].\n|[[2 − λ, 0], [0, 3 − λ]]| = (2 − λ)(3 − λ) = 0 ⇒ λ₁ = 2, λ₂ = 3.\nFor λ₁ = 2:\n(A − 2I)v = [[0, 0], [0, 1]][x, y]ᵀ = [0, 0]ᵀ ⇒ y = 0. Choose x = 1 ⇒ v₁ = [1, 0]ᵀ.\nFor λ₂ = 3:\n(A − 3I)v = [[−1, 0], [0, 0]][x, y]ᵀ = [0, 0]ᵀ ⇒ x = 0. Choose y = 1 ⇒ v₂ = [0, 1]ᵀ.\nML Significance: Principal Component Analysis (PCA) me data ke maximum variance directions identify karne ka main algorithm hai."
+              "3. Matrix Inverse aur iska step-by-step calculation example ke sath explain karein.",
+              "Definition: Square matrix A ke liye inverse A⁻¹ satisfy karta hai: AA⁻¹ = A⁻¹A = I (identity matrix).\nInvertibility Condition: Matrix A invertible hoti hai agar determinant det(A) ≠ 0 ho.\n2 × 2 Formula: A⁻¹ = (1 / (ad − bc)) [[d, −b], [−c, a]].\nWorked Example: Let A = [[1, 2], [3, 4]].\nDeterminant: det(A) = (1×4) − (2×3) = 4 − 6 = −2 ≠ 0.\nA⁻¹ = (1 / −2) [[4, −2], [−3, 1]] = [[−2, 1], [1.5, −0.5]].\nML Application: Linear Regression ke closed-form Normal Equation w = (XᵀX)⁻¹Xᵀy me analytical solution provide karta hai."
+            ]
+          ]
+        }
+      }
+    },
+    "Slot 6: Matrix Properties & Algebraic Rules": {
+      "topics": {
+        "Matrix Properties & Importance in ML": {
+          "cards": [
+            [
+              "1. Matrices ki fundamental algebraic properties kya hain?",
+              "Commutative Addition: A + B = B + A (compatible dimensions me valid).\nAssociative Addition: (A + B) + C = A + (B + C).\nAssociative Multiplication: (AB)C = A(BC).\nDistributive Property: A(B + C) = AB + AC.\nIdentity Property: AI = IA = A (jahan I identity matrix hai jisme diagonal par 1 aur baaki sab 0 hote hain).\nZero Matrix Property: A + 0 = A."
             ],
             [
-              "Q8. Machine Learning me use hone wale different matrix operations (Addition, Subtraction, Multiplication, Transpose, Inverse) explain karein.",
-              "Matrix Operations in ML:\n1. Addition & Subtraction: Corresponding elements par calculate hoti hai. Let A = [[1, 2], [3, 4]], B = [[5, 6], [7, 8]].\nA + B = [[6, 8], [10, 12]]. ML me bias update aur residual error difference nikalne me use hota hai.\n2. Matrix Multiplication: Rows aur columns ka dot product.\nAB = [[(1×5 + 2×7), (1×6 + 2×8)], [(3×5 + 4×7), (3×6 + 4×8)]] = [[19, 22], [43, 50]].\nNeural networks ke forward pass me activations Z = WX + b calculate karta hai.\n3. Transpose: Rows ko columns me interchange karna: Aᵀ = [[1, 3], [2, 4]]. Vector alignment aur gram matrices (XᵀX) banane me use hota hai.\n4. Matrix Inverse: A⁻¹ calculate karta hai jisse AA⁻¹ = I ho. 2 × 2 matrix ke liye formula: A⁻¹ = (1 / (ad − bc)) [[d, −b], [−c, a]].\nFor A = [[1, 2], [3, 4]], determinant = (1×4 − 2×3) = −2 ≠ 0.\nA⁻¹ = (1 / −2) [[4, −2], [−3, 1]] = [[−2, 1], [1.5, −0.5]].\nML use: Normal equation w = (XᵀX)⁻¹Xᵀy me analytical optimization ke liye use hota hai."
+              "2. Matrix Transpose identities aur Non-Commutative Multiplication explain karein.",
+              "Transpose Identities:\n(A + B)ᵀ = Aᵀ + Bᵀ (transpose addition par distribute hota hai).\n(Aᵀ)ᵀ = A (do baar transpose karne par original matrix wapas aati hai).\n(AB)ᵀ = BᵀAᵀ (product ka transpose order reverse kar deta hai).\nNon-Commutative Multiplication: General case me AB ≠ BA hota hai. Multiplication ka order badalne par alag transformation banta hai."
+            ],
+            [
+              "3. Machine Learning me matrix properties aur operations kyun important hain?",
+              "Data Representation: Thousands of samples aur features ko matrix structure me systematically represent kiya jata hai.\nModel Training: Linear regression, logistic regression aur neural networks parameter updates matrix operations me express karte hain.\nNeural Networks: Vectorized matrix multiplication GPUs ke through parallel inference enable karta hai.\nDimensionality Reduction: Covariance matrix analysis aur PCA matrix symmetry aur decomposition properties par based hote hain."
+            ]
+          ]
+        }
+      }
+    },
+    "Slot 7: Eigenvalues, Eigenvectors & PCA": {
+      "topics": {
+        "Eigenpairs, Calculation & Dimensionality Reduction": {
+          "cards": [
+            [
+              "1. Eigenvalues aur Eigenvectors ko define karein aur inka geometric meaning explain karein.",
+              "Eigenvector (v): Ek non-zero vector jiski direction square matrix transformation apply karne par change nahi hoti, woh usi line of action par rehta hai.\nEigenvalue (λ): Woh scalar factor jisse eigenvector stretch, compress ya reverse hota hai.\nFundamental Equation: Av = λv ya (A − λI)v = 0 (jahan A square matrix, v ≠ 0 eigenvector, aur λ scalar eigenvalue hai)."
+            ],
+            [
+              "2. Eigenvalues aur Eigenvectors calculate karne ka step-by-step method example ke sath explain karein.",
+              "Worked Example: Let A = [[2, 0], [0, 3]].\nStep 1 (Find Eigenvalues): Characteristic equation |A − λI| = 0 solve karein.\n|[[2 − λ, 0], [0, 3 − λ]]| = (2 − λ)(3 − λ) = 0 ⇒ Eigenvalues λ₁ = 2, λ₂ = 3.\nStep 2 (Eigenvector for λ₁ = 2): Linear system (A − 2I)v = 0 solve karein.\n[[0, 0], [0, 1]][x, y]ᵀ = [0, 0]ᵀ ⇒ y = 0. Choose x = 1 ⇒ v₁ = [1, 0]ᵀ.\nStep 3 (Eigenvector for λ₂ = 3): Linear system (A − 3I)v = 0 solve karein.\n[[−1, 0], [0, 0]][x, y]ᵀ = [0, 0]ᵀ ⇒ x = 0. Choose y = 1 ⇒ v₂ = [0, 1]ᵀ."
+            ],
+            [
+              "3. Machine Learning aur PCA me Eigenvalues aur Eigenvectors ki kya significance hai?",
+              "Principal Component Analysis (PCA): Covariance matrix ke eigenvectors data ke maximum variance directions (principal axes) represent karte hain.\nDimensionality Reduction: Eigenvalues batate hain ki har principal direction ke along kitna variance/information capture hua hai.\nFeature Compression: Kam eigenvalue wale directions ko drop karke high-dimensional data ko compress kiya jata hai bina critical information lose kiye."
+            ]
+          ]
+        }
+      }
+    },
+    "Slot 8: Real-World Applications & Future Scope": {
+      "topics": {
+        "Industry Use Cases & Future Potential": {
+          "cards": [
+            [
+              "1. Real-world industries me Machine Learning ki major applications explain karein.",
+              "Healthcare: Disease detection, radiology scans (MRI/CT) se tumor segmentation, patient risk prediction, aur drug discovery.\nBanking & Finance: Real-time credit card fraud detection, algorithmic high-frequency trading, aur loan credit risk analysis.\nTransportation: Autonomous self-driving vehicles, lane detection, traffic prediction, aur route optimization.\nE-Commerce & Retail: Collaborative filtering product recommendations aur dynamic pricing algorithms.\nMedia & NLP: Automated speech recognition, language translation, aur generative AI content tools."
+            ],
+            [
+              "2. Traditional software ke comparison me Machine Learning ke key advantages kya hain?",
+              "Automated Pattern Discovery: Massive multi-dimensional data me non-linear complex patterns discover karta hai bina manual rules likhe.\nContinuous Self-Improvement: Naye data ke sath model ke weights automatically optimize hote rehte hain.\nHandles Unstructured Data: Images, audio, video aur natural language text ko effectively process karta hai.\nSpeed & Scalability: Millions of data records ko simultaneously process karke real-time predictions provide karta hai."
+            ],
+            [
+              "3. Machine Learning ka future scope aur transformative potential kya hai?",
+              "Autonomous Robotics: Manufacturing, warehouse logistics aur precision robotic surgery me smart robots.\nPrecision Medicine: Har individual patient ke genomic profile ke according personalized cancer therapies.\nClimate & Sustainable Energy: Smart electrical grid management, carbon emission tracking, aur precision agriculture yield prediction.\nAdaptive Education: Student ki capability aur learning speed ke mutabiq dynamic personalized curriculum."
             ]
           ]
         }

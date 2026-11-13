@@ -393,36 +393,52 @@ function formatAnswerSafe(container, text) {
   });
 }
 
-const defaultCardPositions = [
-  { x: "570px", y: "445px" },
-  { x: "1070px", y: "445px" },
-  { x: "570px", y: "635px" },
-  { x: "1070px", y: "635px" },
-  { x: "820px", y: "825px" },
-];
+function getCardPosition(index, total) {
+  if (total === 1) return { x: "820px", y: "460px" };
+  const col = index % 2;
+  const row = Math.floor(index / 2);
+  const x = col === 0 ? "570px" : "1070px";
+  const y = `${445 + row * 190}px`;
+  return { x, y };
+}
 
 function resetCardPositions() {
+  const cards = topicData[currentTopic]?.cards || [];
   $$(".card").forEach((card, index) => {
-    const pos = defaultCardPositions[index];
-    if (pos) {
-      card.style.setProperty("--x", pos.x);
-      card.style.setProperty("--y", pos.y);
-      card.style.setProperty("--shift-y", "0px");
-    }
+    const pos = getCardPosition(index, cards.length);
+    card.style.setProperty("--x", pos.x);
+    card.style.setProperty("--y", pos.y);
+    card.style.setProperty("--shift-y", "0px");
   });
 }
 
 function renderFlashcards() {
-  resetCardPositions();
   $(".topic h1").textContent = currentTopic.replace(/\?$/, "");
   const cards = topicData[currentTopic].cards;
-  $$(".card").forEach((card, index) => {
+  const existingCards = $$(".card");
+
+  while (existingCards.length < cards.length) {
+    const template = existingCards[0].cloneNode(true);
+    template.classList.remove("open");
+    world.appendChild(template);
+    bindCardEvents(template);
+    existingCards.push(template);
+  }
+
+  const totalRows = Math.ceil(cards.length / 2);
+  const minWorldHeight = Math.max(1000, 480 + totalRows * 200);
+  world.style.height = `${minWorldHeight}px`;
+
+  existingCards.forEach((card, index) => {
     if (index >= cards.length) {
       card.hidden = true;
       return;
     }
     const [question, answer] = cards[index];
+    const pos = getCardPosition(index, cards.length);
     card.hidden = false;
+    card.style.setProperty("--x", pos.x);
+    card.style.setProperty("--y", pos.y);
     card.style.setProperty("--shift-y", "0px");
     card.querySelector(".question").textContent = question;
     formatAnswerSafe(card.querySelector(".answer>div"), answer);
@@ -718,7 +734,7 @@ viewport.onwheel = (event) => {
 };
 onresize = renderView;
 
-$$(".card").forEach((card) => {
+function bindCardEvents(card) {
   let movement = null;
   card.onpointerdown = (event) => {
     if (event.target.closest("summary, details, .answer-subtopic, a, button:not(.question)")) return;
@@ -761,7 +777,9 @@ $$(".card").forEach((card) => {
   };
   card.onpointercancel = clearCardDrag;
   card.onlostpointercapture = clearCardDrag;
-});
+}
+
+$$(".card").forEach(bindCardEvents);
 
 $("#minus").onclick = () => setZoom(view.scale - 0.1);
 $("#plus").onclick = () => setZoom(view.scale + 0.1);
